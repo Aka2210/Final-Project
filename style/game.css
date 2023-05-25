@@ -21,7 +21,7 @@ html, body{
     background-size: 110% 110%;
 }
 
-.initScreen:hover{
+.initScreenImgMove{
     transition: 5s;
     background-size: 300% 300%;
     background-position: 50% 45%;
