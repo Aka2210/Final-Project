@@ -6,3 +6,12 @@ $('html').on('mousemove', (event) => {
         $('.initScreen').removeClass('initScreenImgMove');
     }
 })
+
+$('.BTN').on('click', (BTN) => {
+    if(BTN.target.className === 'leaveBtn')
+        window.close();
+    else if(BTN.target.className === 'startBtn'){
+        $('.initScreen').css('display', 'none');
+        $('.gameScreen').css('display', 'flex');
+    }
+})
