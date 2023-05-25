@@ -29,11 +29,17 @@ html, body{
 }
 
 .BTN{
+    opacity: 0%;
     cursor: pointer;
     display: flex;
     flex-flow: column;
     width: fit-content;
     height: fit-content;
+}
+
+.BTN:hover{
+    transition: 3s;
+    opacity: 100%;
 }
 
 .startBtn, .leaveBtn{
