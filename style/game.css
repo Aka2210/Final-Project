@@ -1,6 +1,11 @@
 *{
     margin: 0px;
     padding: 0px;
+    user-select: none;
+}
+
+img{
+    pointer-events: none;
 }
 
 html, body{
@@ -15,20 +20,21 @@ html, body{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-image: url("../asset/imgs/background.jfif");
+    background-image: url("../asset/imgs/background.jpg");
     box-sizing: border-box;
     background-position: 50% 50%;
     background-size: 110% 110%;
 }
 
-.initScreen:hover{
-    transition: 5s;
+.initScreenImgMove{
+    transition: 3s;
     background-size: 300% 300%;
     background-position: 50% 45%;
     background-image: url("../asset/imgs/backgroundTranform.png");
 }
 
 .BTN{
+    opacity: 0%;
     cursor: pointer;
     display: flex;
     flex-flow: column;
@@ -36,12 +42,23 @@ html, body{
     height: fit-content;
 }
 
+.BTN:hover{
+    transition: 3s;
+    opacity: 100%;
+}
+
 .startBtn, .leaveBtn{
     transform: translateX(5%);
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
     font-size: 40px;
     color: #b7b5b3;
     background-color: #291720;
     border-radius: 10px;
+}
+
+.gameScreen{
+    display: none;
+    width: 100%;
+    height: 100%;
 }
