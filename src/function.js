@@ -4,7 +4,7 @@ import {game} from './Game.js';
 function plotDisplay(i){//遞迴概念函式
     if(i < game.Plot.length){//前情提要
         game.backgroundMusic = musicPlay("KeyboardSound");//抓取要撥放的背景音樂
-        $('.recap').html("&emsp;&emsp;");
+        $('.recap').html("");
         let j = 0;
 
         let subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
@@ -15,7 +15,7 @@ function plotDisplay(i){//遞迴概念函式
                 $('html').off();
                 clearInterval(subtitle);
                 game.backgroundMusic.pause();
-                $('.recap').html("&emsp;&emsp;" + game.Plot[i]);
+                $('.recap').html(game.Plot[i]);
                 SetNextSubtitleBTN(i);//設定前往下一頁字幕的按鈕
                 return;
             })
