@@ -66,9 +66,25 @@ html, body{
 }
 
 .recap{
+    cursor: pointer;
     font-size: 30px;
     line-height: 63px;
     width: 60%;
-    height: 80%;
+    height: fit-content;
     color: white;
+}
+
+.bottomLineDisplay::after{
+    content: "_";
+    animation: bottomLineDisplay infinite 0.1s alternate;
+    
+}
+
+@keyframes bottomLineDisplay{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
