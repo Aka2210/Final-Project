@@ -27,7 +27,7 @@ function plotDisplay(i){//遞迴概念函式
                 game.backgroundMusic.pause();
                 clearInterval(subtitle);//清除計時器
 
-                if(i < game.Plot.length - 1){            
+                if(i < game.Plot.length){            
                     SetNextSubtitleBTN(i);
                 }
             }
