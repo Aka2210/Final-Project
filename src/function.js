@@ -37,8 +37,9 @@ function plotDisplay(i){//遞迴概念函式
         game.specialSoundEffects = "";//清空當前背景音樂
         $('.recap').removeClass("bottomLineDisplay");//關閉字幕後面的底線
         $('.recap').css({'display' : 'none'});
+        $('.roomScreen').css({'display' : 'flex'});
 
-        // $('.test').attr("src", "asset/imgs/background.jpg");
+        $('.test').attr("src", "asset/imgs/background.jpg");
     }
 }
 
