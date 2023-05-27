@@ -1,4 +1,4 @@
-export{plotDisplay};
+export{plotDisplay, musicPlay};
 import {game} from './Game.js';
 
 function plotDisplay(i){//遞迴概念函式
