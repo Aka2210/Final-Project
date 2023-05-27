@@ -3,18 +3,18 @@ import {game} from './Game.js';
 
 function plotDisplay(i){//遞迴概念函式
     if(i < game.Plot.length){//前情提要
-        game.backgroundMusic = musicPlay("KeyboardSound");//抓取要撥放的背景音樂
+        game.specialSoundEffects = musicPlay("KeyboardSound");//抓取要撥放的背景音樂
         $('.recap').html("");
         let j = 0;
 
         let subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
-            game.backgroundMusic.play();//撥放打字聲
+            game.specialSoundEffects.play();//撥放打字聲
             $('.recap').html($('.recap').html() + game.Plot[i][j]);//清空當前前情提要格中的文字
 
             $('html').on('click', () => {//若字尚未打完就點擊，快速打入所有劇情
                 $('html').off();
                 clearInterval(subtitle);
-                game.backgroundMusic.pause();
+                game.specialSoundEffects.pause();
                 $('.recap').html(game.Plot[i]);
                 SetNextSubtitleBTN(i);//設定前往下一頁字幕的按鈕
                 return;
@@ -24,7 +24,7 @@ function plotDisplay(i){//遞迴概念函式
                 j++
             else{
                 $('html').off();
-                game.backgroundMusic.pause();
+                game.specialSoundEffects.pause();
                 clearInterval(subtitle);//清除計時器
 
                 if(i < game.Plot.length){            
@@ -34,7 +34,7 @@ function plotDisplay(i){//遞迴概念函式
         }, 100);
     }
     else{//前情提要結束，前往下一個畫面
-        game.backgroundMusic = "";//清空當前背景音樂
+        game.specialSoundEffects = "";//清空當前背景音樂
         $('.recap').removeClass("bottomLineDisplay");//關閉字幕後面的底線
     }
 }

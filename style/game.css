@@ -88,3 +88,9 @@ html, body{
         opacity: 1;
     }
 }
+
+.loginScreen{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
