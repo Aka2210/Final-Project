@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     user-select: none;
+
 }
 
 img{
@@ -89,7 +90,7 @@ html, body{
     }
 }
 
-.loginScreen{
+.endScreen{
     display: none;
     width: 100%;
     height: 100%;
