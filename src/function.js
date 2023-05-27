@@ -36,6 +36,9 @@ function plotDisplay(i){//遞迴概念函式
     else{//前情提要結束，前往下一個畫面
         game.specialSoundEffects = "";//清空當前背景音樂
         $('.recap').removeClass("bottomLineDisplay");//關閉字幕後面的底線
+        $('.recap').css({'display' : 'none'});
+
+        // $('.test').attr("src", "asset/imgs/background.jpg");
     }
 }
 

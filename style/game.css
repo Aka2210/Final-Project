@@ -90,8 +90,20 @@ html, body{
     }
 }
 
+.roomScreen{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
 .endScreen{
     display: none;
     width: 100%;
     height: 100%;
 }
+
+/* .test{
+    position: absolute;
+    top:x%;
+    right:y%;
+} */
