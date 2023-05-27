@@ -15,23 +15,6 @@ $('html').on('mousemove', (event) => {//滑鼠位置判斷，座標為窗戶內�
     }
 })
 
-$('.BTN').on('click', (BTN) => {//偵測按鈕是否被點擊
-    if(BTN.target.className === 'leaveBtn')//偵測是哪個按鈕被點擊
-        window.close();
-    else if(BTN.target.className === 'startBtn'){
-        $('.initScreen').css('display', 'none');//關閉初始畫面
-        $('.gameScreen').css({//顯示遊戲頁面
-            'display': 'flex',
-            'background-color': 'black'
-        });
-
-        fetch("plot.json")//抓取劇情檔案
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                game.Plot = data.Recap;//抓取前情提要劇情
-                MyModule.plotDisplay(0);
-            })
-    }
+$('.leaveBtn').on('click', () => {
+    window.close();
 })
