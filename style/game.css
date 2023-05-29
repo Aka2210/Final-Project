@@ -3,6 +3,8 @@
     padding: 0px;
     user-select: none;
     color: #b7b5b3;
+    /* border: 3px solid red; */
+    box-sizing: border-box;
 }
 
 a {
@@ -10,7 +12,7 @@ a {
 }
 
 img{
-    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 html, body{
