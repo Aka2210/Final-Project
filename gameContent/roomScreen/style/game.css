@@ -9,14 +9,26 @@
     background-size: cover;
 }
 
-.macbook{
-    background-image: url(../../../asset/imgs/2.png);
-    background-repeat: no-repeat;
-    background-size: 30% auto;
-    background-position: 20% 93%;
-    background-attachment: fixed;
-    display: flex;
-    width: 100%;
-    height: 100%;
+.macbook img{
 
+    background-repeat: no-repeat;
+    width: 30%;  
+    height: auto;   
+    position: absolute;   
+    top: 61%;   
+    left: 13%;
+
+}
+
+.roomScr {
+    width: 100%;   
+    height: auto;  
+    position: relative;
+}
+.roomScr img {
+    width: 100%;  
+    height: auto;   
+    position: absolute;   
+    top: 0;   
+    left: 0;  
 }
