@@ -18,9 +18,7 @@
                 <input type="text" name="playerPassword" class="password" value = "">
                 <input type = "submit" value="登入" class="submit">
             </form>
-            <div class = "mistake">123</div>
             <a href="#">註冊</a>
-            <button>test</button>
         </div>
 
         <?php
