@@ -1,7 +1,7 @@
 import {game} from './Game.js';
 import * as MyModule from './function.js';
 
-window.addEventListener('DOMContentLoaded',() =>{
+document.ready(function() {
     game.backgroundMusic = MyModule.musicPlay("backgroundMusic");
     game.backgroundMusic;
 })
