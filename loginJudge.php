@@ -18,7 +18,7 @@
                 <input type="text" name="playerPassword" class="password" value = "">
                 <input type = "submit" value="登入" class="submit">
             </form>
-            <a href="#">註冊</a>
+            <a href="./signup.php">註冊</a>
         </div>
 
         <?php
@@ -31,14 +31,15 @@
                 $mysqli = new mysqli('localhost', 'root', '', 'playerAccounts');
                 $mysqli->set_charset('utf8mb4');
 
-                $queryEmail = "SELECT Account FROM Accounts WHERE AccountEmail = '$email'";
-                $queryPassword = "SELECT Account FROM Accounts WHERE AccountPassword = '$password'";
+                $query = "SELECT Account FROM accounts WHERE Account = '$email' AND Password = '$password'";
 
-                $queryEmailResult = $mysqli->query($queryEmail);
-                $queryPasswordResult = $mysqli->query($queryPassword);
+                $queryResult = $mysqli->query($query);
 
-                if($queryEmailResult && $queryPasswordResult)
+                $actor = $queryResult->fetch_assoc();
+
+                if($actor !== null){
                     header('location: ./gameContent/initScreen/init.html');
+                }
                 else{
                     $_SESSION["playerAccount"] = null;
                     $_SESSION["playerPassword"] = null;

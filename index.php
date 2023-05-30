@@ -15,11 +15,11 @@
         <div class="loginScreen">
             <form action="index.php" method="post" class="form" >
                 <input type="text" name="playerAccount"  class="email" value = "">
-                <input type="text" name="playerPassword" class="password" value = "">
+                <input type="text" name="playerPassword" class="password" value = "" autocomplete="off">
                 <input type = "submit" value="登入" class="submit">
             </form>
             <div class = "mistake"></div>
-            <a href="#">註冊</a>
+            <a href="./signup.php">註冊</a>
         </div>
 
         <?php
@@ -28,7 +28,6 @@
             if(isset($_SESSION["playerAccount"]) && isset($_SESSION["playerPassword"])){
                 $_SESSION["playerAccount"] = isset($_POST["playerAccount"]) ? $_POST["playerAccount"] : "";
                 $_SESSION["playerPassword"] = isset($_POST["playerPassword"]) ? $_POST["playerPassword"] : "";
-                echo("{$_SESSION["playerAccount"]}, {$_SESSION["playerPassword"]}");
                 header('location: ./loginJudge.php');
             }
 
