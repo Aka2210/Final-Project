@@ -26,12 +26,24 @@
     height: fit-content;
 }
 
+
+
+
+.BTN a{
+    font-family: ‘Noto Sans TC’, sans-serif;
+    font-weight:800; 
+    
+    }
+
 .BTN:hover{
-    transition: 3s;
+    transition: 2s;
     opacity: 100%;
+    
 }
 
-.startBtn, .leaveBtn{
+
+
+/* .startBtn, .leaveBtn{
     transform: translateX(5%);
     margin: 30px;
     padding: 10px;
@@ -39,4 +51,19 @@
     color: #b7b5b3;
     background-color: #291720;
     border-radius: 10px;
-}
+} */
+
+
+.startBtn, .leaveBtn{
+    transform: translateX(5%);
+    margin: 30px;
+    padding: 10px;
+    font-size: 40px;
+    color: #b7b5b3;
+    background-image: radial-gradient(circle, #740806, #370545);
+    border-radius: 10px;
+    }
+
+
+
+
