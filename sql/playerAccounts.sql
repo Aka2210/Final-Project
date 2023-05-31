@@ -17,4 +17,4 @@ CREATE TABLE `Records`
    FOREIGN KEY (`Player`) REFERENCES `Accounts`(`Account`) ON DELETE CASCADE
 );
 
-INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('Admin@gmail.com', 'NUKUCCEP');
+INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('Admin@gmail.com', 'NCKUCCEP');

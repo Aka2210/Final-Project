@@ -15,7 +15,7 @@
         <div class="loginScreen">
             <form action="signup.php" method="post" class="form" >
                 <input type="text" name="playerAccountSignup"  class="emailSignup" value = "">
-                <input type="text" name="playerPasswordSignup" class="passwordSignup" value = "" autocomplete="off">
+                <input type="password" name="playerPasswordSignup" class="passwordSignup" value = "" autocomplete="off">
                 <input type = "submit" value="註冊" class="submit">
             </form>
             <div class = "mistake"></div>
