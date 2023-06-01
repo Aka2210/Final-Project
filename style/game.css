@@ -5,6 +5,9 @@
     color: #b7b5b3;
     /* border: 3px solid red; */
     box-sizing: border-box;
+
+    font-family: ‘Noto Sans TC’, sans-serif;
+    font-weight:800; 
 }
 
 a {
@@ -19,4 +22,39 @@ html, body{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+input{
+    background : none;
+    border: none;
+}
+
+.email, .password, .passwordCheck{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.loginScreen, .signupScreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin: 10px;
+}
+
+.signup, .submit, .login{
+    cursor: pointer;
+    font-size: 20px;   
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }

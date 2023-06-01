@@ -14,12 +14,12 @@
     <body>
         <div class="loginScreen">
             <form action="index.php" method="post" class="form" >
-                <input type="email" name="playerAccount"  class="email" value = "">
-                <input type="password" name="playerPassword" class="password" value = "" autocomplete="off">
+                帳號:<input type="email" name="playerAccount"  class="email" value = "">
+                密碼:<input type="password" name="playerPassword" class="password" value = "" autocomplete="off">
+                <div class = "mistake"></div>
                 <input type = "submit" value="登入" class="submit">
             </form>
-            <div class = "mistake"></div>
-            <a href="./signup.php">註冊</a>
+            <a href="./signup/signup.php" class="signup">註冊</a>
         </div>
 
         <?php
