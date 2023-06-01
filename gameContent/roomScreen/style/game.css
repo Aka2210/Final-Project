@@ -1,5 +1,5 @@
 .gameScreen {
-    background-image: url(../../../asset/imgs/roomPng.jpg);
+    background-image: url(../../../asset/imgs/workroom.png);
     position: relative;
     width: 100%;
     height: 100%;
@@ -17,38 +17,46 @@ img:hover{
     transform: translateZ(50px);
     transform: translateY(-5px);
     transition: 0.5s;
-    box-shadow: 0 0 50px rgb(86, 23, 14);
+
 }
 
-.macbook{
+.camera{
     width: 12%;
     height: 12%;
     position: absolute;   
-    top: 45%;
+    top: 64%;
     left: 20%;
     transform: rotate(-2deg);
 }
+.bread{
+    width: 15%;
+    height: 15%;
+    position: absolute;   
+    top: 64%;
+    left: 10%;
+    transform: rotate(-2deg);
+}
 
-.player{
-    width: 8%;
-    height: 8.5%;
+.phone{
+    width: 20%;
+    height: 20%;
     position: absolute;   
     top: 48%;
     left: 72%;
 }
 
-.mus{
-    width: 3%;
-    height: 3%;   
+.cup{
+    width: 15%;
+    height: 15%;   
     position: absolute;   
-    top: 52%; 
-    left:56%;
+    top: 53%; 
+    left:63%;
 }
 
-.girlpng{
+.book2{
     width: 15%;  
     height: 20%;   
     position: absolute;   
-    top: 20%;   
-    left: 20%;
+    top: 28%;   
+    left: 12%;
 }
