@@ -1,3 +1,19 @@
 *{
-    color: black;
+    color: white;
+}
+
+.loginScreen{
+    background-image: url("/asset/imgs/plotroom.png");
+    background-size: 100% 100% cover;
+    display: flex;
+    align-items: start;
+}
+
+.loginContainer{
+    background-color: black;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -13,13 +13,15 @@
 
     <body>
         <div class="loginScreen">
-            <form action="index.php" method="post" class="form" >
-                帳號:<input type="email" name="playerAccount"  class="email" value = "">
-                密碼:<input type="password" name="playerPassword" class="password" value = "" autocomplete="off">
-                <div class = "mistake"></div>
-                <input type = "submit" value="登入" class="submit">
-            </form>
-            <a href="./signup/signup.php" class="signup">註冊</a>
+            <div class = "loginContainer">
+                <form action="index.php" method="post" class="form" >
+                    帳號:<input type="email" name="playerAccount"  class="email" value = "">
+                    密碼:<input type="password" name="playerPassword" class="password" value = "" autocomplete="off">
+                    <div class = "mistake"></div>
+                    <input type = "submit" value="登入" class="submit">
+                </form>
+                <a href="./signup/signup.php" class="signup">註冊</a>
+            </div>
         </div>
 
         <?php
