@@ -8,7 +8,9 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     $(".phone").on('click', () => {
-        
+        game.specialSoundEffects = OuterModule.musicPlay("speech");
+        game.specialSoundEffects.loop = false;
+        game.specialSoundEffects.play();
     })
 
     $(".cup").on('click', () => {
