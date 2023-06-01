@@ -17,7 +17,7 @@ img:hover{
     transform: translateZ(50px);
     transform: translateY(-5px);
     transition: 0.5s;
-    box-shadow: 0 0 50px rgb(86, 23, 14);
+
 }
 
 .camera{
