@@ -3,7 +3,7 @@
 }
 
 .loginScreen{
-    background-image: url("/asset/imgs/plotroom.png");
+    background-image: url("/asset/imgs/login.png");
     background-size: 100% 100% cover;
     display: flex;
     align-items: start;
