@@ -6,3 +6,16 @@ html{
     background-image: url("../../asset/imgs/ending.png");
     background-size: 100% 100%;
 }
+
+.signupScreen{
+    background-color: #22577a;
+    border-radius: 10px;
+    width: 30%;
+    height: 50%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

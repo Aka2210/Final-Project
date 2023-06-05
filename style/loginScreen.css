@@ -3,8 +3,8 @@
 }
 
 .loginScreen{
-    background-image: url("/asset/imgs/login.png");
-    background-size: 100% 100% cover;
+    background-image: url("../asset/imgs/login.png");
+    background-size: 100% 100%;
     display: flex;
     align-items: start;
 }

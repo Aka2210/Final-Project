@@ -20,10 +20,12 @@
                 <div class = "mistake"></div>
                 <input type = "submit" value="註冊" class="submit">
             </form>
-            <a href="../index.html" class="login">前往登入</a>
+            <a href="../index.php" class="login">前往登入</a>
         </div>
 
         <?php
+            session_start();
+            $_SESSION["firstVisit"] = null;
             $mysqli = new mysqli('localhost', 'root', '', 'playerAccounts');
             $mysqli->set_charset('utf8mb4');
 

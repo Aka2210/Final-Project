@@ -52,7 +52,8 @@ input{
 .signup, .submit, .login{
     cursor: pointer;
     font-size: 20px;
-    border: 10px solid black;
+    padding: 10px;
+    background-color: black;
     border-radius: 10px;   
 }
 

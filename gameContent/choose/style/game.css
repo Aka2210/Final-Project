@@ -1,3 +1,7 @@
+html{
+    overflow-y: hidden;
+}
+
 .chooseScr {
     background-image: url(../../../asset/imgs/pickteam.png);
     position: relative;
@@ -26,7 +30,7 @@ img:hover{
     position: absolute; 
     overflow: hidden;
     background-clip: content-box;  
-    top: 23%;
+    bottom: 0%;
     left: 2%;
     transform: rotate(-2deg);
 }
@@ -34,7 +38,7 @@ img:hover{
     width: 20%;
     height: 70%;
     position: absolute;   
-    top: 25%;
+    bottom: 0%;
     left: 58%;
     transform: rotate(-2deg);
 }
@@ -43,7 +47,7 @@ img:hover{
     width: 24%;
     height: 74%;
     position: absolute;   
-    top: 22%;
+    bottom: 0%;
     left: 70%;
     transform: rotate(-2deg);
 }
@@ -52,7 +56,7 @@ img:hover{
     width: 25%;
     height: 74%;
     position: absolute;   
-    top: 23%;
+    bottom: 0%;
     left: 20%;
     transform: rotate(-2deg);
 }
