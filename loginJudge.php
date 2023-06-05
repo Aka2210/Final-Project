@@ -22,12 +22,12 @@
         else{
             $_SESSION["playerAccount"] = null;
             $_SESSION["playerPassword"] = null;
-            header('location: ./index.php');
+            header('location: ./index.html');
         }
     }
     else{
         $_SESSION["playerAccount"] = null;
         $_SESSION["playerPassword"] = null;
-        header('location: ./index.php');
+        header('location: ./index.html');
     }
 ?>

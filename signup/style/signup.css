@@ -1,3 +1,8 @@
 *{
-    color: black;
+    color: white;
+}
+
+html{
+    background-image: url("../../asset/imgs/ending.png");
+    background-size: 100% 100%;
 }

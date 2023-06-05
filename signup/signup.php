@@ -20,7 +20,7 @@
                 <div class = "mistake"></div>
                 <input type = "submit" value="註冊" class="submit">
             </form>
-            <a href="../index.php" class="login">前往登入</a>
+            <a href="../index.html" class="login">前往登入</a>
         </div>
 
         <?php
