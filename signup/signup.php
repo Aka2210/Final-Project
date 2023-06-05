@@ -30,25 +30,36 @@
             $mysqli->set_charset('utf8mb4');
 
             $emailPattern = "/.+[@]gmail.com/";
+            $passwordPattern = "/.{8}/";
             if(isset($_POST["playerAccountSignup"]) && isset($_POST["playerPasswordSignup"]) && isset($_POST["playerPasswordCheckSignup"])){
                 if($_POST["playerPasswordSignup"] === $_POST["playerPasswordCheckSignup"]){
                     if(preg_match($emailPattern, $_POST["playerAccountSignup"])){
-                        $query = "INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('$_POST[playerAccountSignup]', '$_POST[playerPasswordSignup]')";
+                        if(preg_match($passwordPattern, $_POST["playerPasswordSignup"])){
+                            $query = "INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('$_POST[playerAccountSignup]', '$_POST[playerPasswordSignup]')";
 
-                        if ($mysqli->query($query) === TRUE) {
+                            if ($mysqli->query($query) === TRUE) {
+                                echo
+                                    '<script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $(".mistake").append("<h3 style=color:green;>成功創建帳號</h3>");
+                                        });
+                                    </script>';
+                            } else {
+                                echo
+                                    '<script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $(".mistake").append("<h3 style=color:red;>帳號創建失敗，此Email已被使用</h3>");
+                                        });
+                                    </script>';
+                            }
+                        }
+                        else{
                             echo
-                                '<script type="text/javascript">
-                                    $(document).ready(function() {
-                                        $(".mistake").append("<h3 style=color:green;>成功創建帳號</h3>");
-                                    });
-                                </script>';
-                        } else {
-                            echo
-                                '<script type="text/javascript">
-                                    $(document).ready(function() {
-                                        $(".mistake").append("<h3 style=color:red;>帳號創建失敗，此Email已被使用</h3>");
-                                    });
-                                </script>';
+                                    '<script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $(".mistake").append("<h3 style=color:red;>帳號創建失敗，請使用大於等於八個字的密碼</h3>");
+                                        });
+                                    </script>';
                         }
                     }
                     else{
