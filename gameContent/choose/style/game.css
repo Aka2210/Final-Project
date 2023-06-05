@@ -1,0 +1,74 @@
+.chooseScr {
+    background-image: url(../../../asset/imgs/pickteam.png);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+img{
+    cursor: pointer;
+    z-index: 10;
+}
+
+img:hover{
+    transform: translateZ(50px);
+    transform: translateY(-5px);
+    transition: 0.5s;
+
+}
+
+.Alina{
+    width: 24%;
+    height: 74%;
+    position: absolute; 
+    overflow: hidden;
+    background-clip: content-box;  
+    top: 23%;
+    left: 2%;
+    transform: rotate(-2deg);
+}
+.mayorson{
+    width: 20%;
+    height: 70%;
+    position: absolute;   
+    top: 25%;
+    left: 58%;
+    transform: rotate(-2deg);
+}
+
+.kate{
+    width: 24%;
+    height: 74%;
+    position: absolute;   
+    top: 22%;
+    left: 70%;
+    transform: rotate(-2deg);
+}
+
+.Brain{
+    width: 25%;
+    height: 74%;
+    position: absolute;   
+    top: 23%;
+    left: 20%;
+    transform: rotate(-2deg);
+}
+
+.book2{
+    width: 15%;  
+    height: 20%;   
+    position: absolute;   
+    top: 28%;   
+    left: 12%;
+}
+
+.Next{
+    width: 10%;  
+    height: 5%;   
+    position: fixed;
+    right: 0px;
+    bottom: 10px;   
+}
