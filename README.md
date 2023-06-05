@@ -28,18 +28,26 @@
 
 #### 主角任務
 
-#### 1.音樂聲與人消失的觸發條件:
+#### 1.探查目前線索:
 
 主角在翻閱所有的線索
-(兩篇網友分享的貼文、四個消失的人的特徵介紹，一支案發現場錄音筆
-然後主角選擇要攜帶的物品)
+電話:可以接聽語音訊息，有一則女人的留言:我丈夫真的遇到危險了，他絕對不是迷路失蹤，他從小就住那片森林不可能迷路，他那天說要給我摘蘑菇的，對，蘑菇，有蘑菇的那片潮濕的沼澤地裡有鬼，之前是女巫刑場阿，您醫定要救救他，要救他
 
-(與可見光譜相關，大王花眼睛只能看見500-700nm)所以人只要穿著紫色和藍色就不容易被看到
-音樂聲結束一次只會消失一人，或是不會消失
-音樂聲想起時大家都會不自覺地被吸引，會閉上眼睛
+相機:裡面有很多張相片，關於傳說中的密室，從密室裡偶然存活下來的人拍到的珍貴影像
 
-所以主角必須慎選身上配件的顏色
-這個答案對了出發才不會有危險。
+書:萊拉的故事，萊拉是小鎮裡花匠的女兒，因為有著漂亮的外貌在十七歲時被花匠嫁給鎮長兒子，可是萊拉因為早已愛上隔壁村庄的獵人並不願意，於是鎮長兒子惱羞成怒，將萊拉舉報成女巫，萊拉受盡折磨，被燒死前留下一封血書，詛咒小鎮百年之後滅族。
+Lila is the daughter of a florist in a small town, because of her beautiful appearance at the age of 17 was married by the florist to the mayor's son, but Lila has long been in love with the hunter of the next village does not want to, so the mayor's son was angry and reported Lila as a witch, Lila suffered a lot of torture, was burned to death before leaving a blood letter, cursed the town after a hundred years of extinction.
+
+萊拉還有一個同父異母的妹妹艾琳，在萊拉被舉報為女巫時被鎮長兒子關押進監獄，後來僥倖逃出，卻在將血書拿給萊拉愛人艾瑞克時因為愛上艾瑞克而選擇將血書埋在森林，最後萊拉的是逐漸被人遺忘，艾瑞克也與艾琳生下一女。
+Laila also has a half-sister Erin, in Laila was reported as a witch when the mayor's son was imprisoned, later escaped by chance, but in the blood book to Laila's lover Eric because of love for Eric and choose to bury the blood book in the forest, the last Laila is gradually forgotten, Eric and Erin also gave birth to a daughter.
+
+但好景不常的是，But the good times don't last forever
+
+麵包:收到布萊恩的紙條
+
+水杯:被鎮長下了毒，會跳出一個彈出頁面提醒是否喝水，喝了就會在進入密室時毒發死去，原來你只是鎮長送來的祭品
+
+
 
 
 
