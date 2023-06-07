@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-image: url("../../../asset/imgs/background.jpg");
+    background-image: url("../../../asset/imgs/login.png");
     box-sizing: border-box;
     background-position: 50% 50%;
     background-size: 110% 110%;
@@ -12,9 +12,9 @@
 
 .initScreenImgMove{
     transition: 3s;
-    background-size: 300% 300%;
-    background-position: 50% 45%;
-    background-image: url("../../../asset/imgs/backgroundTranform.png");
+    background-size: 250% 250%;
+    background-position: 47% 55%;
+    background-image: url("../../../asset/imgs/login.png");
 }
 
 .BTN{
