@@ -82,18 +82,6 @@ D、F、G、H、J、K、V (因為V最不符合邏輯)
 會進到一間黑暗卻華麗的密室，裡面有一張女人的畫像，女人會開始說話
 密室的女人旁白:您好，歡迎來到我的三個謎題(答對換下一題，答錯就要殺死一個夥伴)
 
-請問:
-假如你被帶到一個地方，那裡有三個房間，
-你必須要進去其中一個房間，你不能攜帶其他東西，並且要被關在裡面一天。
-而三個房間裡面分別有：
-你的仇人，他手上拿著一把刀，他想殺你
-一頭餓了一個月的獅子
-有著充足的氧氣和易燃物的火災現場
-如果是你，你會選擇進去哪一個房間呢？
-
-答案:進去有獅子的那一個房間。
-因為餓了一個月的獅子早就死了。
-(答對換下一題，答錯就要殺死一個夥伴，殺死順序是第一題沒答對-葉存、第二題沒答對-林許願、第三題沒答對詹女士)
 
 再請問:今天有九個人在一間屋子裡，其中：
 
@@ -125,14 +113,46 @@ D、F、G、H、J、K、V (因為V最不符合邏輯)
 找錯就會吵醒小女孩(她會變身大亡花)
 
 找對後林許願(如果林許願死了，就永遠通不了關)就會帶領大家通關。
+
+
+
 <!-- 結局待編輯 -->
 
 
 
 
+<!-- <!DOCTYPE html>
+
+<html>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <head>
+        <link rel="stylesheet" href ="style/game.css" type="text/css">
+        <link rel="stylesheet" href ="../../style/game.css" type="text/css">
+        <audio id="backgroundMusic" src="../../asset/sounds/backgroundMusic.mp3"></audio>
+        <audio id="KeyboardSound" src="../../asset/sounds/KeyboardSound.mp3"></audio>
+        <title>Final-Project</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+            <div class="chooseScr">
+                <img src="../../asset/imgs/Alina.png" alt="Alina" class="Alina">
+                <img src="../../asset/imgs/Brain.png" alt="Brain" class="Brain">
+                <img src="../../asset/imgs/mayorson.png" alt="mayorson" class="mayorson">
+                <img src="../../asset/imgs/kate.png" alt="kate" class="kate">
+        
+            </div>
+
+    </body>
+
+    <script type="module" src = "src/function.js"></script>
+    <script src = "src/script.js" type = "module"></script>
+</html>
 
 
 
+ -->
 
 
 
