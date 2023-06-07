@@ -3,15 +3,16 @@
 }
 
 html{
-    background-image: url("../../asset/imgs/ending.png");
+    background-image: url("../../asset/imgs/secretroom.png");
     background-size: 100% 100%;
 }
 
 .signupScreen{
-    background-color: #22577a;
+    background-color: #8b2127;
     border-radius: 10px;
     width: 30%;
     height: 50%;
+    opacity: 0.7;
 }
 
 body{
