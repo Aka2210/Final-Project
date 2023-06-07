@@ -5,6 +5,7 @@ class Game{
         this.Plot = "";
         this.backgroundMusic = "";
         this.specialSoundEffects = "";
+        this.bookPage = 1;
     }
 }
 

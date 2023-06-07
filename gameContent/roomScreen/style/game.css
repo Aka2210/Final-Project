@@ -53,15 +53,7 @@ img:hover{
     left:63%;
 }
 
-.book2{
-    width: 15%;  
-    height: 20%;   
-    position: absolute;   
-    top: 28%;   
-    left: 12%;
-}
-
-.Next{
+.levelNext{
     width: 10%;  
     height: 5%;   
     position: fixed;

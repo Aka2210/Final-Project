@@ -5,6 +5,8 @@
     <head>
         <link rel="stylesheet" href ="style/game.css" type="text/css">
         <link rel="stylesheet" href ="../../style/game.css" type="text/css">
+        <link rel="stylesheet" href ="style/bookImg.css" type="text/css">
+        <link rel="stylesheet" href ="style/brandImg.css" type="text/css">
         <audio id="backgroundMusic" src="../../asset/sounds/backgroundMusic.mp3"></audio>
         <audio id="KeyboardSound" src="../../asset/sounds/KeyboardSound.mp3"></audio>
         <audio id="keyPhone" src="../../asset/sounds/keyPhone.mp3"></audio>
@@ -14,12 +16,26 @@
 
     <body>
         <div class="gameScreen">
-            <img src="../../asset/imgs/camera.png" alt="camera" class="camera">
-            <img src="../../asset/imgs/phone.png" alt="phone" class="phone">
-            <img src="../../asset/imgs/cup.png" alt="cup" class="cup">
-            <img src="../../asset/imgs/book2.png" alt="book2" class="book2">
-            <img src="../../asset/imgs/bread.png" alt="bread" class="bread">
-            <a href="../choose/choose.html"><img src="../../asset/imgs/goB.png" alt="Next" class="Next"></a>
+            <div class="roomScreen">
+                <img src="../../asset/imgs/camera.png" alt="camera" class="camera">
+                <img src="../../asset/imgs/phone.png" alt="phone" class="phone">
+                <img src="../../asset/imgs/cup.png" alt="cup" class="cup">
+                <img src="../../asset/imgs/book2.png" alt="book2" class="book2">
+                <img src="../../asset/imgs/bread.png" alt="bread" class="bread">
+                <a href="../choose/choose.html"><img src="../../asset/imgs/goB.png" alt="levelNext" class="levelNext"></a>
+            </div>
+
+            <div class="book">
+                <h5 class="bookClose">X</h5>
+                <h1 class="bookLast"><</h1>
+                <img class="bookImg" src = "../../asset/imgs/keyBook/1.png">
+                <h1 class="bookNext">></h1>
+            </div>
+
+            <div class="breadScreen">
+                <h5 class="breadClose">X</h5>
+                <img class="breadImg" src = "../../asset/imgs/keyBrand/keyBrand.png">
+            </div>
         </div>
     </body>
 

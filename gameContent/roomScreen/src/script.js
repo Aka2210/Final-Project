@@ -3,25 +3,25 @@ import * as OuterModule from '../../../src/function.js';
 import * as MyModule from './function.js';
 
 window.addEventListener('DOMContentLoaded', () => {
+    MyModule.bookEventListenCreate();
+
+    MyModule.phoneEventListenCreate();
+
     $(".camera").on('click', () => {
 
-    })
-
-    $(".phone").on('click', () => {
-        game.specialSoundEffects = OuterModule.musicPlay("keyPhone");
-        game.specialSoundEffects.loop = false;
-        game.specialSoundEffects.play();
     })
 
     $(".cup").on('click', () => {
         
     })
 
-    $(".book2").on('click', () => {
-        
+    $(".bread").on('click', () => {
+        $(".breadScreen").css("display", "flex");
+        $(".roomScreen").css("display", "none");
     })
 
-    $(".bread").on('click', () => {
-        
+    $(".breadClose").on('click', () => {
+        $(".roomScreen").css("display", "flex");
+        $(".breadScreen").css("display", "none");
     })
 })
