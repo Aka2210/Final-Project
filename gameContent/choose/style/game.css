@@ -2,7 +2,7 @@ html{
     overflow-y: hidden;
 }
 
-.chooseScr {
+.chooseScreen {
     background-image: url(../../../asset/imgs/pickteam.png);
     position: relative;
     width: 100%;
@@ -61,18 +61,59 @@ img:hover{
     transform: rotate(-2deg);
 }
 
-.book2{
-    width: 15%;  
-    height: 20%;   
-    position: absolute;   
-    top: 28%;   
-    left: 12%;
+.chooseMessageScreen{
+    display: none;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
 }
 
-.Next{
-    width: 10%;  
-    height: 5%;   
-    position: fixed;
-    right: 0px;
-    bottom: 10px;   
+.chooseMessage{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-bottom: 1%;
+    background-color: #fdf67e;
+    width: 60%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.chooseMessageBTN{
+    height: 30%;
+    width: 100%;
+    display: flex;
+}
+
+.chooseMessageText{
+    height: 70%;
+    width: 80%;
+    padding: 1%;
+}
+
+.chooseCheck, .chooseClose{
+    box-sizing: none;
+    border-radius: 10px;
+    margin: 1%;
+    border: 3px solid #4c3616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+.chooseCheck:hover, .chooseClose:hover{
+    background-color: gray;
+    transition: 0.2s;
+}
+
+.character{
+    display: flex;
+}
+
+.chooseCharacter:hover{
+    transform: none;
 }

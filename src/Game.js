@@ -7,6 +7,7 @@ class Game{
         this.specialSoundEffects = "";
         this.bookPage = 1;
         this.cameraPicture = 1;
+        this.character = "";
     }
 }
 
