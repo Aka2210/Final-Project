@@ -88,12 +88,14 @@ img:hover{
 }
 
 .chooseMessageText{
+    cursor: pointer;
     height: 70%;
     width: 80%;
     padding: 1%;
 }
 
 .chooseCheck, .chooseClose{
+    font-size: 25px;
     box-sizing: none;
     border-radius: 10px;
     margin: 1%;

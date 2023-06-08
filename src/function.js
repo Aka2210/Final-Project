@@ -16,8 +16,8 @@ function plotDisplay(i, where){
     let subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
         where.html(where.html() + game.Plot[i][j]);//清空當前前情提要格中的文字
 
-        $('html').on('click', () => {//若字尚未打完就點擊，快速打入所有劇情
-            $('html').off();
+        $(where).on('click', () => {//若字尚未打完就點擊，快速打入所有劇情
+            $(where).off();
             clearInterval(subtitle);
             where.html(game.Plot[i]);
             return;
