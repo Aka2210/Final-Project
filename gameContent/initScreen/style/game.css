@@ -35,7 +35,7 @@
     
 }
 
-.startBtn, .leaveBtn{
+/* .startBtn, .leaveBtn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,34 @@
     color: #b7b5b3;
     background-image: radial-gradient(circle, #740806, #370545);
     border-radius: 10px;
+} */
+
+.startBtn, .leaveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(5%);
+    margin: 30px;
+    padding: 10px;
+    font-size: 40px;
+    color: #b7b5b3;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.795);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+    box-shadow: 0 0 10px 0 rgba(241, 196, 196, 0.5);
+    }
+    50% {
+    box-shadow: 0 0 20px 10px rgba(250, 174, 174, 0.3);
+    }
+    100% {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.945);
+    }
 }
 
 .leaveBtn{
