@@ -47,6 +47,8 @@ function phoneEventListenCreate(){
     })
 
     $(".phoneClose").on('click', () => {
+        game.specialSoundEffects.pause();
+        game.specialSoundEffects.currentTime = 0;
         game.specialSoundEffects = "";
         $(".phoneScreen").css("display", "none");
         $(".roomScreen").css("display", "flex");
