@@ -46,9 +46,10 @@
 }
 
 .bookClose{
+    color: darkolivegreen;
     cursor: pointer;
     z-index: 100;
     position: fixed;
-    top: 14%;
+    top: 14.5%;
     right: 40%;
 }
