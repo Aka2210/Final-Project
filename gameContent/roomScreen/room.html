@@ -5,14 +5,16 @@
     <head>
         <link rel="stylesheet" href ="style/game.css" type="text/css">
         <link rel="stylesheet" href ="../../style/game.css" type="text/css">
-        <link rel="stylesheet" href ="style/bookImg.css" type="text/css">
-        <link rel="stylesheet" href ="style/breadImg.css" type="text/css">
-        <link rel="stylesheet" href ="style/camera.css" type="text/css">
+        <link rel="stylesheet" href ="style/bookScreen.css" type="text/css">
+        <link rel="stylesheet" href ="style/breadScreen.css" type="text/css">
+        <link rel="stylesheet" href ="style/cameraScreen.css" type="text/css">
+        <link rel="stylesheet" href ="style/cupScreen.css" type="text/css">
+        <link rel="stylesheet" href ="style/phoneScreen.css" type="text/css">
         <audio id="backgroundMusic" src="../../asset/sounds/backgroundMusic.mp3"></audio>
         <audio id="KeyboardSound" src="../../asset/sounds/KeyboardSound.mp3"></audio>
         <audio id="keyPhone" src="../../asset/sounds/keyPhone.mp3"></audio>
         <title>Final-Project</title>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
     </head>
 
     <body>
@@ -24,6 +26,10 @@
                 <img src="../../asset/imgs/book2.png" alt="book2" class="book2">
                 <img src="../../asset/imgs/bread.png" alt="bread" class="bread">
                 <a href="../choose/choose.html"><img src="../../asset/imgs/goB.png" alt="levelNext" class="levelNext"></a>
+            </div>
+
+            <div class="phoneScreen">
+                <h5 class="phoneClose">X</h5>
             </div>
 
             <div class="book">
@@ -43,6 +49,23 @@
                 <h5 class="cameraClose">X</h5>
                 <img class="cameraImg" src = "../../asset/imgs/keyCamera/1.png">
                 <h1 class="cameraNext">></h1>
+            </div>
+
+            <div class="cupScreen">
+                <div class="cupMessage">
+                    <h1 class="cupMessageText">
+                    </h1>
+
+                    <div class="cupMessageBTN">
+                        <div class="cupClose">
+                            晚點再喝
+                        </div>
+
+                        <div class="cupCheck">
+                            安心飲用
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
