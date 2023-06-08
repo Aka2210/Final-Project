@@ -10,10 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     MyModule.breadEventListenCreate();
 
     MyModule.cameraEventListenCreate();
-    
-    $(".cup").on('click', () => {
-        
-    })
 
-    
+    MyModule.cupEventListenCreate();
 })
