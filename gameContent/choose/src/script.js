@@ -4,7 +4,8 @@ import * as MyModule from './function.js';
 
 window.addEventListener("DOMContentLoaded", () => {
     $(".character *").on("click", (character) => {
-        sessionStorage.setItem("Character", character.target.className);
+        game.character = character.target.className
+        sessionStorage.setItem("Character", game.character);
 
         $(".character").css("display", "none");
         $(".chooseCharacter").attr("src", "../../asset/imgs/" + character.target.className + ".png");
@@ -16,7 +17,12 @@ window.addEventListener("DOMContentLoaded", () => {
         })
 
         $(".chooseCheck").on('click', () => {
-            
+            if(game.character === "mayorson"){
+                
+            }
+            else{
+                window.location.href = "../road/road.html";
+            }
         })
     })
 })
