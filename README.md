@@ -70,6 +70,9 @@ Laila also has a half-sister Erin, in Laila was reported as a witch when the may
 夥伴三(男):Kate
 背景:22歲，是被政府派駐來小鎮的數學老師，因為有學生莫名的消失，為了尋找真正的原因所以想跟你一起尋找真相。
 
+##### 選擇了鎮長的兒子就會在下一個關卡被鎮長兒子陷害死去，選擇其他則並無影響。
+
+
 #### 3.通關尋找謎團真相:
 
 跟隨音樂的人會來到七個密室
