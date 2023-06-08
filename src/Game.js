@@ -6,6 +6,7 @@ class Game{
         this.backgroundMusic = "";
         this.specialSoundEffects = "";
         this.bookPage = 1;
+        this.cameraPicture = 1;
     }
 }
 

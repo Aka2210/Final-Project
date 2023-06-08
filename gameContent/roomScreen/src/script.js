@@ -7,21 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     MyModule.phoneEventListenCreate();
 
-    $(".camera").on('click', () => {
+    MyModule.breadEventListenCreate();
 
-    })
-
+    MyModule.cameraEventListenCreate();
+    
     $(".cup").on('click', () => {
         
     })
 
-    $(".bread").on('click', () => {
-        $(".breadScreen").css("display", "flex");
-        $(".roomScreen").css("display", "none");
-    })
-
-    $(".breadClose").on('click', () => {
-        $(".roomScreen").css("display", "flex");
-        $(".breadScreen").css("display", "none");
-    })
+    
 })
