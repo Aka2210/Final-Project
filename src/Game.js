@@ -9,6 +9,10 @@ class Game{
         this.cameraPicture = 1;
         this.character = "";
     }
+
+    resetGame(){
+        localStorage.clear();
+    }
 }
 
 const game = new Game;

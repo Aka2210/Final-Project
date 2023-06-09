@@ -124,9 +124,22 @@ function cupEventListenCreate(){
     })
 
     $(".cupCheck").on('click', () => {
-        $('*').off('click');
+        $(".cup").off();
+        clearInterval(OuterModule.subtitle);
 
-        OuterModule.diePlay($(".cupScreen"), "room.html");
+        OuterModule.plotDisplay(1, $(".cupMessageText"));
+
+        $(".cupClose").text("確認");
+        $(".cupCheck").css("display", "none");
+
+        localStorage.setItem("DIE", true);
+
+        $(".cup").on('click', () => {
+            $(".roomScreen").css("display", "none");
+            $(".cupScreen").css("display", "flex");
+            
+            OuterModule.plotDisplay(2, $(".cupMessageText"));
+            })
     })
 
     $(".cupClose").on('click', () => {
