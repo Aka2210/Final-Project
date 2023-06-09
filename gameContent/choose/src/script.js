@@ -23,7 +23,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
         $(".chooseCheck").on('click', () => {
             if(game.character === "mayorson"){
-                window.off();
+                $('*').off('click');
+
+                OuterModule.diePlay($(".chooseMessageScreen"), "choose.html");
             }
             else{
                 window.location.href = "../road/road.html";
