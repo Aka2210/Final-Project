@@ -107,7 +107,7 @@ function cameraEventListenCreate(){
 
 function cupEventListenCreate(){
     $(".cupClose").text("晚點再喝");
-    $(".cupCheck").text("安心飲用");
+    $(".cupCheck").text("開心飲用");
 
     $(".cup").on('click', () => {
         $(".roomScreen").css("display", "none");
