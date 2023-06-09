@@ -63,3 +63,32 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+.donotTransform:hover{
+    transform: none;
+}
+
+.reset, .home{
+    color: #4c3616;
+    font-size: 50px;
+}
+
+.reset{
+    margin-right: 2%;
+}
+
+.home{
+    margin-left: 2%;
+}
+
+.resetScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b2127;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20%;
+    width: 100%;
+    z-index: 10000;
+}

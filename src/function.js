@@ -1,6 +1,6 @@
 import { game } from "./Game.js";
 
-export{musicPlay, plotDisplay, Music, subtitle};
+export{musicPlay, plotDisplay, Music, subtitle, diePlay};
 
 let subtitle;
 
@@ -38,4 +38,91 @@ function Music(){
     game.backgroundMusic = musicPlay("backgroundMusic");
     game.backgroundMusic.volume = 0.05;
     game.backgroundMusic.play();
+}
+
+function diePlay(where, homePosition){
+    let times = 0;
+
+    let die1 = setInterval(() => {
+        let positionX = Math.floor(Math.random() * -10 - 40), positionY = Math.floor(Math.random() * -10);
+
+        if(times >1)
+            clearInterval(die1);
+
+        times++;
+
+        let dieImg1 = $("<img>");
+        dieImg1.attr("src", "../../asset/imgs/specialeffects.png");
+        dieImg1.css({"position" : "fixed"
+        , "top" : positionY + "%"
+        , "left" : positionX + "%"});
+        dieImg1.addClass("donotTransform");
+        where.append(dieImg1);
+    }, 800);
+
+    let die2 = setInterval(() => {
+        let positionY = Math.floor(Math.random() * -10 - 10);
+
+        if(times >1){
+            clearInterval(die2);
+            setTimeout(() => {
+                let dieImg = $("<img>");
+                dieImg.attr("src", "../../asset/imgs/specialeffectsDie.png");
+                dieImg.css({"position" : "fixed"
+                , "top" : "-20%"});
+                dieImg.addClass("donotTransform");
+                where.append(dieImg);
+
+                let reset = $("<h1>"), resetScreen = $("<div>"), home = $("<h1>");
+
+                resetScreen.addClass("resetScreen");
+
+                reset.addClass("reset");
+
+                reset.text("重新開始");
+                resetScreen.append(reset);
+
+                home.addClass("home");
+
+                home.text("回首頁");
+                resetScreen.append(home);
+
+                where.append(resetScreen);
+
+                $(".reset").on("click", () => {
+                    window.location.href = homePosition;
+                })
+
+                $(".home").on("click", () => {
+                    window.location.href = "../initScreen/init.html";
+                })
+
+            }, 300) 
+        }
+
+        times++;
+
+        let dieImg2 = $("<img>");
+        dieImg2.attr("src", "../../asset/imgs/specialeffects.png");
+        dieImg2.css({"position" : "fixed"
+        , "top" : positionY + "%"});
+        dieImg2.addClass("donotTransform");
+        where.append(dieImg2);
+    }, 1000);
+
+    let die3 = setInterval(() => {
+        let positionX = Math.floor(Math.random() * -10 - 40), positionY = Math.floor(Math.random() * -10 - 10);
+        if(times >1)
+            clearInterval(die3);
+
+        times++;
+
+        let dieImg3 = $("<img>");
+        dieImg3.attr("src", "../../asset/imgs/specialeffects.png");
+        dieImg3.css({"position" : "fixed"
+        , "top" : positionY + "%"
+        , "right" : positionX + "%"});
+        dieImg3.addClass("donotTransform");
+        where.append(dieImg3);
+    }, 500);
 }
