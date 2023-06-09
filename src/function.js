@@ -1,6 +1,8 @@
 import { game } from "./Game.js";
 
-export{musicPlay, plotDisplay};
+export{musicPlay, plotDisplay, Music, subtitle};
+
+let subtitle;
 
 function musicPlay(MusicID){
     let Music = $('#' + MusicID)[0];//抓取ID為MusicID的音樂檔
@@ -13,7 +15,7 @@ function plotDisplay(i, where){
     where.html("");
     let j = 0;
 
-    let subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
+    subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
         where.html(where.html() + game.Plot[i][j]);//清空當前前情提要格中的文字
 
         $(where).on('click', () => {//若字尚未打完就點擊，快速打入所有劇情
@@ -30,4 +32,10 @@ function plotDisplay(i, where){
             clearInterval(subtitle);//清除計時器
         }
     }, 100);
+}
+
+function Music(){
+    game.backgroundMusic = musicPlay("backgroundMusic");
+    game.backgroundMusic.volume = 0.05;
+    game.backgroundMusic.play();
 }

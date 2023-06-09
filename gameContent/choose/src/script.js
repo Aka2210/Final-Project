@@ -3,6 +3,11 @@ import * as OuterModule from '../../../src/function.js';
 import * as MyModule from './function.js';
 
 window.addEventListener("DOMContentLoaded", () => {
+    if (performance.navigation.type == 1) {
+        window.location.href = "../../index.php";
+    }
+    
+    OuterModule.Music();
     $(".character *").on("click", (character) => {
         game.character = character.target.className
         sessionStorage.setItem("Character", game.character);
@@ -18,7 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         $(".chooseCheck").on('click', () => {
             if(game.character === "mayorson"){
-                
+                window.off();
             }
             else{
                 window.location.href = "../road/road.html";

@@ -39,15 +39,19 @@ function phoneEventListenCreate(){
         game.specialSoundEffects = OuterModule.musicPlay("keyPhone");
         game.specialSoundEffects.loop = false;
         game.specialSoundEffects.play();
+        game.backgroundMusic.pause();
         $(".phoneScreen").css("display", "flex");
         $(".roomScreen").css("display", "none");
         $("#keyPhone").on('ended', () => {
+            game.backgroundMusic.play();
+            $(".phoneScreen").css("display", "none");
             $(".roomScreen").css("display", "flex");
         })
     })
 
     $(".phoneClose").on('click', () => {
         game.specialSoundEffects.pause();
+        game.backgroundMusic.play();
         game.specialSoundEffects.currentTime = 0;
         game.specialSoundEffects = "";
         $(".phoneScreen").css("display", "none");
@@ -120,10 +124,11 @@ function cupEventListenCreate(){
     })
 
     $(".cupCheck").on('click', () => {
-        
+        $('*').off('click');
     })
 
     $(".cupClose").on('click', () => {
+        clearInterval(OuterModule.subtitle);
         $(".roomScreen").css("display", "flex");
         $(".cupScreen").css("display", "none");
     })

@@ -3,10 +3,12 @@ import * as OuterModule from '../../../src/function.js';
 import * as MyModule from './function.js';
 
 window.addEventListener('DOMContentLoaded',() =>{
-    game.backgroundMusic = OuterModule.musicPlay("backgroundMusic");
-    game.backgroundMusic;
+    if (performance.navigation.type == 1) {
+        window.location.href = "../../index.php";
+    }
 
-    game.backgroundMusic.play();
+    OuterModule.Music();
+    
     $('.gameScreen').addClass('initScreenImgMove');
     // $('.gameScreen').removeClass('initScreenImgMove');
     
