@@ -12,7 +12,7 @@
     align-items: center;
     flex-flow: column wrap;
     margin-bottom: 1%;
-    background-color: #fdf67e;
+    background-color: #bc1b15;
     width: 80%;
     height: 30%;
     border-radius: 10px;
@@ -25,6 +25,8 @@
 }
 
 .cupMessageText{
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
     height: 70%;
     width: 80%;
@@ -45,6 +47,6 @@
 }
 
 .cupCheck:hover, .cupClose:hover{
-    background-color: gray;
+    background-color: rgb(255, 252, 252);
     transition: 0.2s;
 }
