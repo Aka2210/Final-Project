@@ -14,7 +14,7 @@ function musicPlay(MusicID){
 function plotDisplay(i, where){
     where.html("");
     let j = 0;
-
+    console.log(game.Plot[1]);
     subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
         where.html(where.html() + game.Plot[i][j]);//清空當前前情提要格中的文字
 
@@ -40,7 +40,7 @@ function Music(){
     game.backgroundMusic.play();
 }
 
-function diePlay(where, homePosition){
+function diePlay(where){
     let times = 0;
 
     let die1 = setInterval(() => {
@@ -90,7 +90,7 @@ function diePlay(where, homePosition){
                 where.append(resetScreen);
 
                 $(".reset").on("click", () => {
-                    window.location.href = homePosition;
+                    window.location.href = "../Recap/recap.html";
                 })
 
                 $(".home").on("click", () => {
