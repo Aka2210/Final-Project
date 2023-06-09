@@ -125,6 +125,8 @@ function cupEventListenCreate(){
 
     $(".cupCheck").on('click', () => {
         $('*').off('click');
+
+        OuterModule.diePlay($(".cupScreen"), "room.html");
     })
 
     $(".cupClose").on('click', () => {
