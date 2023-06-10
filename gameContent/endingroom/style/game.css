@@ -1,0 +1,109 @@
+html{
+    overflow-y: hidden;
+}
+
+.mazeScr {
+    background-image: url(../../../asset/imgs/maze.png);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+
+    
+    .worddoor_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .worddoor_container a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 10px;
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+        background: transparent;
+        border: 2px solid #c8e9ff;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 10px #c8e9ff;
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .worddoor_container a:hover {
+        color: #cb0303;
+        background: transparent;
+        box-shadow: 0 0 20px 10px #8b0000;
+    }
+img{
+    cursor: pointer;
+    z-index: 10;
+}
+
+img:hover{
+    transform: translateZ(50px);
+    transform: translateY(-5px);
+    transition: 0.5s;
+
+}
+
+.Alina{
+    width: 24%;
+    height: 74%;
+    position: absolute; 
+    overflow: hidden;
+    background-clip: content-box;  
+    bottom: 0%;
+    left: 2%;
+    transform: rotate(-2deg);
+}
+.mayorson{
+    width: 20%;
+    height: 70%;
+    position: absolute;   
+    bottom: 0%;
+    left: 58%;
+    transform: rotate(-2deg);
+}
+
+.kate{
+    width: 24%;
+    height: 74%;
+    position: absolute;   
+    bottom: 0%;
+    left: 70%;
+    transform: rotate(-2deg);
+}
+
+.Brain{
+    width: 25%;
+    height: 74%;
+    position: absolute;   
+    bottom: 0%;
+    left: 20%;
+    transform: rotate(-2deg);
+}
+
+.book2{
+    width: 15%;  
+    height: 20%;   
+    position: absolute;   
+    top: 28%;   
+    left: 12%;
+}
+
+.Next{
+    width: 10%;  
+    height: 5%;   
+    position: fixed;
+    right: 0px;
+    bottom: 10px;   
+}
