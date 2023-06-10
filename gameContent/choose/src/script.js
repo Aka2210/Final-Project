@@ -24,32 +24,46 @@ window.addEventListener("DOMContentLoaded", () => {
             .then(function(data) {
                 if(game.character === "Alina"){
                     game.Plot = data.Alina;
+
+                    MyModule.displayDialogue("(傳說總是怪力亂神的，並不靠譜)", "瞭解歷史也許能給我很大的幫助。");
                 }
                 else if(game.character === "Brain"){
                     game.Plot = data.Brain;
+
+                    OuterModule.plotDisplay(0, $(".chooseMessageText"));
+
+                    $(".chooseClose").css("display", "none");
+
+                    $(".chooseCheck").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
+
+                    let i = 1;
+                    $(".chooseCheck").on('click', () =>{
+                        OuterModule.plotDisplay(i, $(".chooseMessageText"));
+
+                        i++;
+
+                        $(".chooseCheck").attr("value", "大火?");
+
+                        if(i === 3){
+                            MyModule.closeClickCreate();
+                            MyModule.checkClickCreate();
+
+                            $(".chooseClose").css("display", "flex");
+                            $(".chooseClose").text("(總感覺有些可疑)");
+                            $(".chooseCheck").attr("value", "好吧，那就麻煩你了。");
+                        }
+                    })
                 }
                 else if(game.character === "mayorson"){
                     game.Plot = data.mayorson;
+
+                    MyModule.displayDialogue("(用犧牲是不是太誇張了)", "警察應該有相關調查經驗吧?");
                 }
                 else if(game.character === "kate"){
                     game.Plot = data.kate;
+
+                    MyModule.displayDialogue("(總感覺google比老師有用呢)", "那我們可以從消失者訊息著手調查。");
                 }
-
-                OuterModule.plotDisplay(0, $(".chooseMessageText"));
-            })
-
-        $(".chooseClose").on('click', () => {        
-            $(".character").css("display", "flex");
-            $(".chooseMessageScreen").css("display", "none");
-            clearInterval(OuterModule.subtitle);
-        })
-
-        $(".chooseCheck").on('click', () => {
-            if(game.character === "mayorson"){
-                localStorage.setItem("DIE", true);
-            }
-            clearInterval(OuterModule.subtitle);
-            window.location.href = "../road/road.html";
-        })
+            })    
     })
 })
