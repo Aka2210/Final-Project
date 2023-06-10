@@ -2,8 +2,8 @@ html{
     overflow-y: hidden;
 }
 
-.mazeScr {
-    background-image: url(../../../asset/imgs/maze.png);
+.failScr {
+    background-image: url(../../../asset/imgs/faiI.gif);
     position: relative;
     width: 100%;
     height: 100%;

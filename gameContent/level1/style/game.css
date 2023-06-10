@@ -2,8 +2,8 @@ html{
     overflow-y: hidden;
 }
 
-.mazeScr {
-    background-image: url(../../../asset/imgs/maze.png);
+.level1Scr {
+    background-image: url(../../../asset/imgs/level1.png);
     position: relative;
     width: 100%;
     height: 100%;
@@ -92,12 +92,12 @@ img:hover{
     transform: rotate(-2deg);
 }
 
-.book2{
-    width: 15%;  
-    height: 20%;   
+.Q1{
+    width: 88%;  
+    height: 87%;   
     position: absolute;   
-    top: 28%;   
-    left: 12%;
+    top: 1%;   
+    left: 1%;
 }
 
 .Next{
@@ -106,4 +106,15 @@ img:hover{
     position: fixed;
     right: 0px;
     bottom: 10px;   
+}
+
+#timer {
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;   
+    top: 20%;   
+    left: 50%;
+    text-shadow: 0 0 20px white;
 }
