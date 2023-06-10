@@ -13,25 +13,57 @@ window.addEventListener("DOMContentLoaded", () => {
         sessionStorage.setItem("Character", game.character);
 
         $(".character").css("display", "none");
-        $(".chooseCharacter").attr("src", "../../asset/imgs/" + character.target.className + ".png");
-        $(".chooseMessageScreen").css("display", "flex");
+        $(".MessageCharacter").attr("src", "../../asset/imgs/" + character.target.className + ".png");
+        $(".MessageScreen").css("display", "flex");
 
-        $(".chooseClose").on('click', () => {        
-            $(".character").css("display", "flex");
-            $(".chooseMessageScreen").css("display", "none");
-        })
+        fetch("dialogue.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if(game.character === "Alina"){
+                    game.Plot = data.Alina;
+                    MyModule.displayDialogue("(傳說總是怪力亂神的，並不靠譜)", "瞭解歷史也許能給我很大的幫助。");
+                }
+                else if(game.character === "Brain"){
+                    game.Plot = data.Brain;
 
-        $(".chooseCheck").on('click', () => {
-            if(game.character === "mayorson"){
-                localStorage.setItem("DIE", true);
+                    OuterModule.plotDisplay(0, $(".MessageText"));
 
-                $('*').off('click');
+                    $(".Close").css("display", "none");
 
-                OuterModule.diePlay($(".chooseMessageScreen"));
-            }
-            else{
-                window.location.href = "../road/road.html";
-            }
-        })
+                    $(".Check").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
+
+                    let i = 1;
+                    $(".Check").on('click', () =>{
+                        OuterModule.plotDisplay(i, $(".MessageText"));
+
+                        i++;
+
+                        $(".Check").attr("value", "大火?");
+
+                        if(i === 3){
+                            MyModule.closeClickCreate();
+                            MyModule.checkClickCreate();
+
+                            $(".Close").css("display", "flex");
+                            $(".Close").text("(總感覺有些可疑)");
+                            $(".Check").attr("value", "好吧，那就麻煩你了。");
+                        }
+                    })
+                }
+                else if(game.character === "mayorson"){
+                    game.Plot = data.mayorson;
+
+                    MyModule.displayDialogue("(用犧牲是不是太誇張了)", "警察應該有相關調查經驗吧?");
+                }
+                else if(game.character === "kate"){
+                    game.Plot = data.kate;
+
+                    MyModule.displayDialogue("(總感覺google比老師有用呢)", "那我們可以從消失者訊息著手調查。");
+                }
+
+                localStorage.setItem("CharacterImg", "../../asset/imgs/"+ game.character +".png");
+            })    
     })
 })

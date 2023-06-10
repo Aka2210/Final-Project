@@ -3,8 +3,8 @@
 <html>
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <head>
-        <link rel="stylesheet" href ="style/game.css" type="text/css">
         <link rel="stylesheet" href ="../../style/game.css" type="text/css">
+        <link rel="stylesheet" href ="style/game.css" type="text/css">
         <audio id="backgroundMusic" src="../../asset/sounds/choose.mp3"></audio>
         <audio id="KeyboardSound" src="../../asset/sounds/KeyboardSound.mp3"></audio>
         <title>Final-Project</title>
@@ -21,19 +21,18 @@
                     <img src="../../asset/imgs/kate.png" alt="kate" class="kate">
                 </div>
 
-                <div class="chooseMessageScreen">
-                    <img src="../../asset/imgs/Alina.png" alt="Alina" class="chooseCharacter">
+                <div class="MessageScreen">
+                    <img src="../../asset/imgs/Alina.png" alt="Alina" class="MessageCharacter donotTransform">
                     
-                    <div class="chooseMessage">
-                        <h1 class="chooseMessageText">
+                    <div class="Message">
+                        <h1 class="MessageText">
                         </h1>
                         
-                        <div class="chooseMessageBTN">
-                            <div class="chooseClose">
-                                再考慮一下
+                        <div class="MessageBTN">
+                            <div class="Close">
                             </div>
 
-                            <input type="submit" action = "characterStorge.php" class="chooseCheck" value="就是你了">
+                            <input type="submit" action = "characterStorge.php" class="Check" value="就是你了">
                             </input>
                         </div>
                     </div>
