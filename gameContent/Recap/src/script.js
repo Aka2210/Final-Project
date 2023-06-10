@@ -12,7 +12,11 @@ window.addEventListener('DOMContentLoaded', () => {//偵測按鈕是否被點擊
             return response.json();
         })
         .then(function(data) {
-            game.Plot = data.Recap;//抓取前情提要劇情
+            let die = localStorage.getItem("DIE");
+            if(die)
+                game.Plot = data.badend;
+            else
+                game.Plot = data.Recap;//抓取前情提要劇情
             MyModule.plotDisplay(0);
         })
 })

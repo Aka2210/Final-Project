@@ -73,28 +73,20 @@ function diePlay(where){
                 dieImg.addClass("donotTransform");
                 where.append(dieImg);
 
-                let reset = $("<h1>"), resetScreen = $("<div>"), home = $("<h1>");
+                let reset = $("<h1>"), resetScreen = $("<div>");
 
                 resetScreen.addClass("resetScreen");
 
                 reset.addClass("reset");
 
-                reset.text("重新開始");
+                reset.text("確定");
                 resetScreen.append(reset);
-
-                home.addClass("home");
-
-                home.text("回首頁");
-                resetScreen.append(home);
 
                 where.append(resetScreen);
 
                 $(".reset").on("click", () => {
+                    localStorage.setItem("DIE", true);
                     window.location.href = "../Recap/recap.html";
-                })
-
-                $(".home").on("click", () => {
-                    window.location.href = "../initScreen/init.html";
                 })
 
             }, 300) 

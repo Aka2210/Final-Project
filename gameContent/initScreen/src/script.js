@@ -7,6 +7,8 @@ window.addEventListener('DOMContentLoaded',() =>{
         window.location.href = "../../index.php";
     }
 
+    game.resetGame();
+
     OuterModule.Music();
     
     $('.gameScreen').addClass('initScreenImgMove');

@@ -24,7 +24,7 @@ function displayDialogue(dialogueClose, dialogueCheck){
 
         $(".Close").css("display", "none");
 
-        $(".Check").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
+        $(".Check").text("你好，我是政府委託來調查失蹤案件的調查員。");
 
         $(".Check").on('click', () =>{
             OuterModule.plotDisplay(1, $(".MessageText"));
@@ -34,6 +34,6 @@ function displayDialogue(dialogueClose, dialogueCheck){
 
             $(".Close").css("display", "flex");
             $(".Close").text(dialogueClose);
-            $(".Check").attr("value", dialogueCheck);
+            $(".Check").text(dialogueCheck);
         })
 }

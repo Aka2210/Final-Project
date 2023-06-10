@@ -39,7 +39,11 @@ function plotDisplay(i){//遞迴概念函式
         $('.recap').removeClass("bottomLineDisplay");//關閉字幕後面的底線
         $('.recap').css({'display' : 'none'});
         $('.roomScreen').css({'display' : 'flex'});
-        window.location.href = "../roomScreen/room.html";
+        let die = localStorage.getItem("DIE");
+        if(die)
+            window.location.href = "../initScreen/init.html";
+        else
+            window.location.href = "../roomScreen/room.html";
     }
 }
 

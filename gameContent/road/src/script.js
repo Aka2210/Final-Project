@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                     $(".Check").eq(2).css("display", "none");
 
-                    $(".Check").eq(1).text("是名字很特別的妙法小學嗎?")
+                    $(".Check").eq(1).text("是叫魔法小學嗎?")
 
                     $(".Check").eq(0).text("鬼故事?")            
 
@@ -92,8 +92,7 @@ window.addEventListener('DOMContentLoaded',() =>{
                             $(".Check").eq(0).text("...");
                             $(".Check").on("click", () => {                                                                                   
                                 $(".Check").eq(0).off();
-                                console.log("die");
-                                //後續行動
+                                OuterModule.diePlay($(".roadScreen"));
                             })
                         }
                         i++;                        
