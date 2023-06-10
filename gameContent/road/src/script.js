@@ -7,4 +7,8 @@ window.addEventListener('DOMContentLoaded',() =>{
         window.location.href = "../../index.php";
     }
     OuterModule.Music();
+
+    game.character = localStorage.getItem("CharacterImg");
+    
+    console.log(game.character);
 })

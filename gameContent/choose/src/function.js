@@ -3,17 +3,17 @@ import {game} from '../../../src/Game.js';
 import * as OuterModule from '../../../src/function.js';
 
 function closeClickCreate(){
-    $(".chooseClose").on('click', () => {        
+    $(".Close").on('click', () => {        
         $(".character").css("display", "flex");
-        $(".chooseMessageScreen").css("display", "none");
+        $(".MessageScreen").css("display", "none");
         clearInterval(OuterModule.subtitle);
-        $(".chooseClose").off();
-        $(".chooseCheck").off();
+        $(".Close").off();
+        $(".Check").off();
     })
 }
 
 function checkClickCreate(){
-    $(".chooseCheck").on('click', () => {
+    $(".Check").on('click', () => {
         if(game.character === "mayorson"){
             localStorage.setItem("DIE", true);
         }
@@ -23,20 +23,20 @@ function checkClickCreate(){
 }
 
 function displayDialogue(dialogueClose, dialogueCheck){
-    OuterModule.plotDisplay(0, $(".chooseMessageText"));
+    OuterModule.plotDisplay(0, $(".MessageText"));
 
-        $(".chooseClose").css("display", "none");
+        $(".Close").css("display", "none");
 
-        $(".chooseCheck").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
+        $(".Check").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
 
-        $(".chooseCheck").on('click', () =>{
-            OuterModule.plotDisplay(1, $(".chooseMessageText"));
+        $(".Check").on('click', () =>{
+            OuterModule.plotDisplay(1, $(".MessageText"));
 
             closeClickCreate();
             checkClickCreate();
 
-            $(".chooseClose").css("display", "flex");
-            $(".chooseClose").text(dialogueClose);
-            $(".chooseCheck").attr("value", dialogueCheck);
+            $(".Close").css("display", "flex");
+            $(".Close").text(dialogueClose);
+            $(".Check").attr("value", dialogueCheck);
         })
 }

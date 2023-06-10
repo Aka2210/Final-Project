@@ -106,8 +106,8 @@ function cameraEventListenCreate(){
 }
 
 function cupEventListenCreate(){
-    $(".cupClose").text("晚點再喝");
-    $(".cupCheck").text("開心飲用");
+    $(".Close").text("晚點再喝");
+    $(".Check").text("開心飲用");
 
     $(".cup").on('click', () => {
         $(".roomScreen").css("display", "none");
@@ -119,18 +119,18 @@ function cupEventListenCreate(){
         })
         .then(function(data) {
             game.Plot = data.cup;
-            OuterModule.plotDisplay(0, $(".cupMessageText"));
+            OuterModule.plotDisplay(0, $(".MessageText"));
         })
     })
 
-    $(".cupCheck").on('click', () => {
+    $(".Check").on('click', () => {
         $(".cup").off();
         clearInterval(OuterModule.subtitle);
 
-        OuterModule.plotDisplay(1, $(".cupMessageText"));
+        OuterModule.plotDisplay(1, $(".MessageText"));
 
-        $(".cupClose").text("確認");
-        $(".cupCheck").css("display", "none");
+        $(".Close").text("確認");
+        $(".Check").css("display", "none");
 
         localStorage.setItem("DIE", true);
 
@@ -138,11 +138,11 @@ function cupEventListenCreate(){
             $(".roomScreen").css("display", "none");
             $(".cupScreen").css("display", "flex");
             
-            OuterModule.plotDisplay(2, $(".cupMessageText"));
+            OuterModule.plotDisplay(2, $(".MessageText"));
             })
     })
 
-    $(".cupClose").on('click', () => {
+    $(".Close").on('click', () => {
         clearInterval(OuterModule.subtitle);
         $(".roomScreen").css("display", "flex");
         $(".cupScreen").css("display", "none");

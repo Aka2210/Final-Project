@@ -92,3 +92,56 @@ form{
     width: 100%;
     z-index: 10000;
 }
+
+.MessageScreen{
+    display: none;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+}
+
+.Message{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-bottom: 1%;
+    background-color: #bc1b15;
+    width: 80%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.MessageBTN{
+    height: 30%;
+    width: 100%;
+    display: flex;
+}
+
+.MessageText{
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    height: 70%;
+    width: 80%;
+    padding: 1%;
+}
+
+.Check, .Close{
+    font-size: 25px;
+    box-sizing: none;
+    border-radius: 10px;
+    margin: 1%;
+    border: 3px solid #4c3616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+.Check:hover, .Close:hover{
+    background-color: rgb(255, 252, 252);
+    transition: 0.2s;
+}
