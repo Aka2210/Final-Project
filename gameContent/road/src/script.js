@@ -36,9 +36,10 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                         $(".Check").eq(1).text("也許怪病與這次的事件相關") 
 
-                        $(".Check").on("click", () => {                           
+                        $(".Check").on('click', () => {
                             $(".Check").off();
-                        })                     
+                            MyModule.ghostJump();
+                        })
                     })
                 }
                 else if(game.character === "Brain"){
@@ -60,8 +61,9 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                         $(".Check").eq(0).text("校園鬼故事啊，好像每間小學或多或少都會有呢") 
 
-                        $(".Check").on("click", () => {          
+                        $(".Check").on('clic', () => {
                             $(".Check").off();
+                            MyModule.ghostJump();
                         })
                     })
                 }
@@ -113,7 +115,10 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                         $(".Check").eq(0).text("那時黑死病的治療方式主要還是靠女巫吧?");
 
-                        //後續行動
+                        $(".Check").on('clic', () => {
+                            $(".Check").off();
+                            MyModule.ghostJump();
+                        })
                     })
                 }
             })

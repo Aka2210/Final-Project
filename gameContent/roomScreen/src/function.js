@@ -132,7 +132,7 @@ function cupEventListenCreate(){
         $(".Close").text("確認");
         $(".Check").css("display", "none");
 
-        localStorage.setItem("DIE", true);
+        localStorage.setItem("DRINK", true);
 
         $(".cup").on('click', () => {
             $(".roomScreen").css("display", "none");

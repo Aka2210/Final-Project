@@ -14,9 +14,6 @@ function closeClickCreate(){
 
 function checkClickCreate(){
     $(".Check").on('click', () => {
-        if(game.character === "mayorson"){
-            localStorage.setItem("DIE", true);
-        }
         clearInterval(OuterModule.subtitle);
         window.location.href = "../road/road.html";
     })
