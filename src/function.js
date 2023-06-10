@@ -11,7 +11,7 @@ function musicPlay(MusicID){
     return Music;//將抓到且設定好的音樂回傳
 }
 
-function plotDisplay(i, where){
+function plotDisplay(i, where, times = 100){
     clearInterval(subtitle);
     where.html("");
     let j = 0;
@@ -31,7 +31,7 @@ function plotDisplay(i, where){
             $('html').off();
             clearInterval(subtitle);//清除計時器
         }
-    }, 100);
+    }, times);
 }
 
 function Music(){

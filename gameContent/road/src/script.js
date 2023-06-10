@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                         $(".Check").eq(0).text("校園鬼故事啊，好像每間小學或多或少都會有呢") 
 
-                        $(".Check").on('clic', () => {
+                        $(".Check").on('click', () => {
                             $(".Check").off();
                             MyModule.ghostJump();
                         })
@@ -115,7 +115,7 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                         $(".Check").eq(0).text("那時黑死病的治療方式主要還是靠女巫吧?");
 
-                        $(".Check").on('clic', () => {
+                        $(".Check").on('click', () => {
                             $(".Check").off();
                             MyModule.ghostJump();
                         })
