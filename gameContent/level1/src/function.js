@@ -1,4 +1,4 @@
-export{startTiming};
+export{startTiming, showPuzzle};
 import {game} from '../../../src/Game.js';
 import * as OuterModule from '../../../src/function.js';
 
@@ -23,6 +23,8 @@ function startTiming(){
 
     if (time === 0) {
         clearInterval(interval);
+
+        OuterModule.diePlay($(".level1Scr"));
         // 在計時器結束後可以執行其他操作
     }
 
@@ -31,4 +33,12 @@ function startTiming(){
 
     updateTimer(); // 更新一次計時器以避免延遲
     let interval = setInterval(updateTimer, 1000); // 每秒更新計時器
+}
+
+function showPuzzle(){
+    $(".Check").on("click", () => {
+        $(".MessageScreen").css("display", "none");   
+        $(".game").css("display", "flex");
+        $(".Check").off();
+    })
 }

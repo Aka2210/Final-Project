@@ -15,10 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {//偵測按鈕是否被點擊
             let die = localStorage.getItem("DIE");
             if(die){
                 let character = localStorage.getItem("Character");
-                if(character === "Alina" || character === "mayorson")
-                    game.Plot = data.BadEnding1;
-                else{
+                if(character === "Brain")
                     game.Plot = data.BadEnding2;
+                else{
+                    game.Plot = data.BadEnding1;
                 }
             }
             else

@@ -29,6 +29,7 @@ html{
     top: 20%;   
     left: 50%;
     text-shadow: 0 0 20px white;
+    color: rgb(188, 87, 87);
 }
 
 input, .A5{
@@ -69,4 +70,13 @@ input, .A5{
     left: 40%;
     width: fit-content;
     height: fit-content;
+}
+
+.Message{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.game{
+    display: none;
 }
