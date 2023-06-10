@@ -8,7 +8,113 @@ window.addEventListener('DOMContentLoaded',() =>{
     }
     OuterModule.Music();
 
-    game.character = localStorage.getItem("CharacterImg");
-    
-    console.log(game.character);
+    game.character = localStorage.getItem("Character");
+
+    $(".MessageCharacter").attr("src", '../../asset/imgs/' + game.character +'.png');
+
+    fetch("roadPlot.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if(game.character === "Alina"){
+                    game.Plot = data.Alina;
+                    OuterModule.plotDisplay(0, $(".MessageText"));
+
+                    $(".Check").eq(0).text("傳說總是空穴來風，是不可信的呢")
+
+                    $(".Check").eq(1).text("何必相信毫無根據的事呢?")
+
+                    $(".Check").eq(2).css("display", "none")
+
+                    $(".Check").on("click", () => {
+                        OuterModule.plotDisplay(1, $(".MessageText"));
+
+                        $(".Check").off();
+
+                        $(".Check").eq(0).text("難怪不管早晚，街上都不熱鬧呢")
+
+                        $(".Check").eq(1).text("也許怪病與這次的事件相關") 
+
+                        $(".Check").on("click", () => {                           
+                            $(".Check").off();
+                        })                     
+                    })
+                }
+                else if(game.character === "Brain"){
+                    game.Plot = data.Brain;
+                    OuterModule.plotDisplay(0, $(".MessageText"));
+
+                    $(".Check").eq(2).css("display", "none");
+
+                    $(".Check").eq(1).text("是名字很特別的妙法小學嗎?")
+
+                    $(".Check").eq(0).text("鬼故事?")            
+
+                    $(".Check").on("click", () => {
+                        OuterModule.plotDisplay(1, $(".MessageText"));
+                        
+                        $(".Check").off();
+
+                        $(".Check").eq(1).text("故事有了，就差沒有鬼怪衝出來了")
+
+                        $(".Check").eq(0).text("校園鬼故事啊，好像每間小學或多或少都會有呢") 
+
+                        $(".Check").on("click", () => {          
+                            $(".Check").off();
+                        })
+                    })
+                }
+                else if(game.character === "mayorson"){
+                    game.Plot = data.mayorson;
+
+                    OuterModule.plotDisplay(0, $(".MessageText"));
+
+                    $(".Check").eq(2).css("display", "none");
+
+                    $(".Check").eq(0).text("啊!剛剛一下子太忙了，來不及喝")
+
+                    $(".Check").eq(1).text("有啊是您特別準備的嗎?")
+
+                    let i = 1;
+                    $(".Check").on("click", () => {
+                        OuterModule.plotDisplay(i, $(".MessageText"));
+                        if(i === 1){
+                            $(".Check").eq(0).text("增加監視器數量，減少視野死角?");
+                            $(".Check").eq(1).text("刑事局介入調查?");
+                        }
+                        else if(i === 2){
+                            $(".Check").off();
+
+                            $(".Check").eq(1).css("display", "none");
+                            $(".Check").eq(0).text("...");
+                            $(".Check").on("click", () => {                                                                                   
+                                $(".Check").eq(0).off();
+                                console.log("die");
+                                //後續行動
+                            })
+                        }
+                        i++;                        
+                    })
+                }
+                else if(game.character === "kate"){
+                    game.Plot = data.kate;
+                    OuterModule.plotDisplay(0, $(".MessageText"));
+
+                    $(".Check").eq(1).css("display", "none");
+                    $(".Check").eq(2).css("display", "none");
+
+                    $(".Check").text("晚上通往學校的道路真是陰森呢")
+
+                    $(".Check").on("click", () => {
+                        $(".Check").off();
+
+                        OuterModule.plotDisplay(1, $(".MessageText"));
+
+                        $(".Check").eq(0).text("那時黑死病的治療方式主要還是靠女巫吧?");
+
+                        //後續行動
+                    })
+                }
+            })
 })
