@@ -62,8 +62,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
                     MyModule.displayDialogue("(總感覺google比老師有用呢)", "那我們可以從消失者訊息著手調查。");
                 }
-
-                localStorage.setItem("Character", game.character);
             })    
     })
 })

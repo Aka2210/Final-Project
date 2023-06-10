@@ -30,3 +30,43 @@ html{
     left: 50%;
     text-shadow: 0 0 20px white;
 }
+
+input, .A5{
+    text-decoration: none;
+    position: fixed;
+    width: 4.1%;
+    height: 6%;
+    font-size: 48px;
+    text-align: center;
+    z-index: 10;
+    outline: none;
+}
+
+.A1{   
+    top: 59%;
+    left: 36.8%;
+}
+
+.A2{
+    top: 55%;
+    left: 42.3%;  
+}
+
+.A3{
+    top: 59%;
+    left: 48.8%;
+}
+
+.A4{
+    top: 57%;
+    left: 54.2%;
+}
+
+.A5{
+    color: brown;
+    cursor: pointer;
+    top: 68%;
+    left: 40%;
+    width: fit-content;
+    height: fit-content;
+}

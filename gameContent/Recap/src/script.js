@@ -13,8 +13,14 @@ window.addEventListener('DOMContentLoaded', () => {//偵測按鈕是否被點擊
         })
         .then(function(data) {
             let die = localStorage.getItem("DIE");
-            if(die)
-                game.Plot = data.badend;
+            if(die){
+                let character = localStorage.getItem("Character");
+                if(character === "Alina" || character === "mayorson")
+                    game.Plot = data.BadEnding1;
+                else{
+                    game.Plot = data.BadEnding2;
+                }
+            }
             else
                 game.Plot = data.Recap;//抓取前情提要劇情
             MyModule.plotDisplay(0);

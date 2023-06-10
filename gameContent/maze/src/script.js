@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded',() =>{
                 }
                 else if(game.character === "kate"){
                     game.Plot = data.kate;
+                    $(".worddoor_container a").eq(0).css("display", "none");
                 }
 
                 OuterModule.plotDisplay(0, $(".MessageText"));

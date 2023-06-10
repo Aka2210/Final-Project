@@ -15,6 +15,9 @@ function closeClickCreate(){
 function checkClickCreate(){
     $(".Check").on('click', () => {
         clearInterval(OuterModule.subtitle);
+        localStorage.setItem("Character", game.character);
+        if(game.character === "mayorson")
+            localStorage.setItem("BeKill", true);
         window.location.href = "../road/road.html";
     })
 }

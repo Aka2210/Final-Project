@@ -74,9 +74,9 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                     $(".Check").eq(2).css("display", "none");
 
-                    $(".Check").eq(0).text("啊!剛剛一下子太忙了，來不及喝")
+                    $(".Check").eq(0).text("為了自己而犧牲他人是必要的")
 
-                    $(".Check").eq(1).text("有啊是您特別準備的嗎?")
+                    $(".Check").eq(1).text("不，我們應該盡可能地解救雙方")
 
                     let i = 1;
                     $(".Check").on("click", () => {
