@@ -60,8 +60,28 @@ window.addEventListener('DOMContentLoaded',() =>{
             })
 
     $(".A5").on("click", () => {
-        if($(".A1").val() === 7 && $(".A2").val() === 1 && $(".A3").val() === 4 && $(".A4").val() === 2){
+        if($(".A1").val() == 7 && $(".A2").val() == 1 && $(".A3").val() == 4 && $(".A4").val() == 2){
+            fetch("dialogue.json")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    game.Plot = data.correct;
+                    $(".MessageCharacter").css("display", "none");
+                    $(".MessageScreen").css("display", "flex");
+                    $(".Check").eq(0).text("太好了，我們真是聰明!");
+                    $(".game").css("display", "none");
+                    OuterModule.plotDisplay(0, $(".MessageText"));
 
+                    $(".Check").eq(0).on("click", () => {
+                        $(".Check").eq(0).off();
+                        OuterModule.mazeRoom();
+                        OuterModule.mazeRoomClickDetect("../level2/level2.html");
+                        $(".worddoor_container").css("display", "flex");
+                        $(".MessageScreen").css("display", "none");
+                        $(".game").css("display", "none");
+                    })
+                })
         }
         else{
             fetch("dialogue.json")

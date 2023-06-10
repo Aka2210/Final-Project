@@ -1,6 +1,6 @@
 import { game } from "./Game.js";
 
-export{musicPlay, plotDisplay, Music, subtitle, diePlay};
+export{musicPlay, plotDisplay, Music, subtitle, diePlay, mazeRoom, mazeRoomClickDetect};
 
 let subtitle;
 
@@ -117,4 +117,60 @@ function diePlay(where){
         dieImg3.addClass("donotTransform");
         where.append(dieImg3);
     }, 500);
+}
+
+function mazeRoom(){
+    let room = localStorage.getItem("room");
+    let roomArray = JSON.parse(room);
+    for(let i = 0; i < roomArray.length; i++){
+        $(".worddoor_container a").eq(roomArray[i]).css("display", "none");
+    }
+}
+
+function mazeRoomClickDetect(where){
+    let room = localStorage.getItem("room");
+    let roomArray = JSON.parse(room);
+
+    $(".worddoor_container a").eq(0).on("click", () => {            
+        roomArray.push(0);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(1).on("click", () => {            
+        roomArray.push(1);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(2).on("click", () => {            
+        roomArray.push(2);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(3).on("click", () => {            
+        roomArray.push(3);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(4).on("click", () => {            
+        roomArray.push(4);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(5).on("click", () => {            
+        roomArray.push(5);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(6).on("click", () => {            
+        roomArray.push(6);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
 }
