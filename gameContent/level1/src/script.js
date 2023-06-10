@@ -42,3 +42,15 @@ window.addEventListener('DOMContentLoaded',() =>{
         updateTimer(); // 更新一次計時器以避免延遲
         var interval = setInterval(updateTimer, 1000); // 每秒更新計時器
     });
+
+
+    //輸入數字的框框
+    var input = document.querySelector('.input-box input');
+    input.addEventListener('input', function() {
+    var value = this.value.replace(/\D/g, '');   
+    if (value.length > 4) {
+        value = value.slice(0, 4);
+    }    
+    //更新
+    this.value = value;
+    });
