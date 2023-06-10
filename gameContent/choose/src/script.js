@@ -16,22 +16,40 @@ window.addEventListener("DOMContentLoaded", () => {
         $(".chooseCharacter").attr("src", "../../asset/imgs/" + character.target.className + ".png");
         $(".chooseMessageScreen").css("display", "flex");
 
+
+        fetch("dialogue.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if(game.character === "Alina"){
+                    game.Plot = data.Alina;
+                }
+                else if(game.character === "Brain"){
+                    game.Plot = data.Brain;
+                }
+                else if(game.character === "mayorson"){
+                    game.Plot = data.mayorson;
+                }
+                else if(game.character === "kate"){
+                    game.Plot = data.kate;
+                }
+
+                OuterModule.plotDisplay(0, $(".chooseMessageText"));
+            })
+
         $(".chooseClose").on('click', () => {        
             $(".character").css("display", "flex");
             $(".chooseMessageScreen").css("display", "none");
+            clearInterval(OuterModule.subtitle);
         })
 
         $(".chooseCheck").on('click', () => {
             if(game.character === "mayorson"){
                 localStorage.setItem("DIE", true);
-
-                $('*').off('click');
-
-                OuterModule.diePlay($(".chooseMessageScreen"));
             }
-            else{
-                window.location.href = "../road/road.html";
-            }
+            clearInterval(OuterModule.subtitle);
+            window.location.href = "../road/road.html";
         })
     })
 })

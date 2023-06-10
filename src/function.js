@@ -12,9 +12,9 @@ function musicPlay(MusicID){
 }
 
 function plotDisplay(i, where){
+    clearInterval(subtitle);
     where.html("");
     let j = 0;
-    console.log(game.Plot[1]);
     subtitle = setInterval(() => {//設置計時器，每100毫秒打一個字
         where.html(where.html() + game.Plot[i][j]);//清空當前前情提要格中的文字
 
