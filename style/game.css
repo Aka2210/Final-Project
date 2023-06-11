@@ -111,6 +111,7 @@ form{
     width: 80%;
     height: 30%;
     border-radius: 10px;
+    opacity: 0.9;
 }
 
 .MessageBTN{

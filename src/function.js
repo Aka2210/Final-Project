@@ -1,6 +1,6 @@
 import { game } from "./Game.js";
 
-export{musicPlay, plotDisplay, Music, subtitle, diePlay};
+export{musicPlay, plotDisplay, Music, subtitle, diePlay, mazeRoom, mazeRoomClickDetect};
 
 let subtitle;
 
@@ -11,7 +11,7 @@ function musicPlay(MusicID){
     return Music;//將抓到且設定好的音樂回傳
 }
 
-function plotDisplay(i, where){
+function plotDisplay(i, where, times = 100){
     clearInterval(subtitle);
     where.html("");
     let j = 0;
@@ -31,7 +31,7 @@ function plotDisplay(i, where){
             $('html').off();
             clearInterval(subtitle);//清除計時器
         }
-    }, 100);
+    }, times);
 }
 
 function Music(){
@@ -73,28 +73,20 @@ function diePlay(where){
                 dieImg.addClass("donotTransform");
                 where.append(dieImg);
 
-                let reset = $("<h1>"), resetScreen = $("<div>"), home = $("<h1>");
+                let reset = $("<h1>"), resetScreen = $("<div>");
 
                 resetScreen.addClass("resetScreen");
 
                 reset.addClass("reset");
 
-                reset.text("重新開始");
+                reset.text("確定");
                 resetScreen.append(reset);
-
-                home.addClass("home");
-
-                home.text("回首頁");
-                resetScreen.append(home);
 
                 where.append(resetScreen);
 
                 $(".reset").on("click", () => {
+                    localStorage.setItem("DIE", true);
                     window.location.href = "../Recap/recap.html";
-                })
-
-                $(".home").on("click", () => {
-                    window.location.href = "../initScreen/init.html";
                 })
 
             }, 300) 
@@ -125,4 +117,60 @@ function diePlay(where){
         dieImg3.addClass("donotTransform");
         where.append(dieImg3);
     }, 500);
+}
+
+function mazeRoom(){
+    let room = localStorage.getItem("room");
+    let roomArray = JSON.parse(room);
+    for(let i = 0; i < roomArray.length; i++){
+        $(".worddoor_container a").eq(roomArray[i]).css("display", "none");
+    }
+}
+
+function mazeRoomClickDetect(where){
+    let room = localStorage.getItem("room");
+    let roomArray = JSON.parse(room);
+
+    $(".worddoor_container a").eq(0).on("click", () => {            
+        roomArray.push(0);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(1).on("click", () => {            
+        roomArray.push(1);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(2).on("click", () => {            
+        roomArray.push(2);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(3).on("click", () => {            
+        roomArray.push(3);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(4).on("click", () => {            
+        roomArray.push(4);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(5).on("click", () => {            
+        roomArray.push(5);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
+    $(".worddoor_container a").eq(6).on("click", () => {            
+        roomArray.push(6);
+        room = JSON.stringify(roomArray);
+        localStorage.setItem("room", room);
+        window.location.href = where;
+    })
 }

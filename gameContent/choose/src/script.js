@@ -32,24 +32,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
                     $(".Close").css("display", "none");
 
-                    $(".Check").attr("value", "你好，我是政府委託來調查失蹤案件的調查員。");
+                    $(".Check").text("你好，我是政府委託來調查失蹤案件的調查員。");
 
                     let i = 1;
                     $(".Check").on('click', () =>{
                         OuterModule.plotDisplay(i, $(".MessageText"));
 
-                        i++;
-
-                        $(".Check").attr("value", "大火?");
-
-                        if(i === 3){
+                        if(i === 1)
+                            $(".Check").text("大火?");
+                        else if(i === 2){
                             MyModule.closeClickCreate();
                             MyModule.checkClickCreate();
 
                             $(".Close").css("display", "flex");
                             $(".Close").text("(總感覺有些可疑)");
-                            $(".Check").attr("value", "好吧，那就麻煩你了。");
+                            $(".Check").text("好吧，那就麻煩你了。");
                         }
+
+                        i++;
                     })
                 }
                 else if(game.character === "mayorson"){
@@ -62,8 +62,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
                     MyModule.displayDialogue("(總感覺google比老師有用呢)", "那我們可以從消失者訊息著手調查。");
                 }
-
-                localStorage.setItem("CharacterImg", "../../asset/imgs/"+ game.character +".png");
             })    
     })
 })
