@@ -176,3 +176,36 @@ form{
     background: transparent;
     box-shadow: 0 0 20px 10px #8b0000;
 }
+
+.EYE{
+    display: none;
+}
+
+.eye1, .eye2{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    animation: EYE 3s 2 alternate both;
+}
+
+.eye1{
+    top: 0%;
+}
+
+.eye2{
+    bottom: 0%;
+}
+
+@keyframes EYE{
+    33.3%{
+        height: 50%;
+    }
+    66.6%{
+        height: 0%;
+    }
+    100%{
+        height: 50%;
+    }
+}

@@ -45,9 +45,35 @@ window.addEventListener('DOMContentLoaded',() =>{
                 $(".Check").eq(2).css("display", "none");
 
                 $(".Check").on("click", () => {
-                    $(".MessageScreen").css("display", "none");
-                    OuterModule.mazeRoomClickDetect("../level1/level1.html");
-                    $(".worddoor_container").css("display", "flex");
+                    let Drink = localStorage.getItem("DRINK");
+                    if(Drink){
+                        game.Plot = data.cupDie;
+                        OuterModule.plotDisplay(0, $(".MessageText"), 300);
+                        $(".Check").eq(0).text("怎麼了?");
+                        $(".Check").on("click", () => {
+                            OuterModule.plotDisplay(1, $(".MessageText"), 200);
+                            $(".Check").eq(0).text("我也感覺到有些暈眩，需不需要先停下來休息?");
+                            $(".Check").off();
+
+                            $(".Check").on("click", () => {
+                                OuterModule.plotDisplay(2, $(".MessageText"), 300);
+                                $(".Check").eq(0).text("有狀況隨時互相回報。");
+                                $(".Check").off();
+
+                                $(".Check").on("click", () => {
+                                    $(".Check").off();
+                                    $(".MessageScreen").css("display", "none");
+                                    OuterModule.mazeRoomClickDetect("../level1/level1.html");
+                                    $(".worddoor_container").css("display", "flex");                          
+                                })                      
+                            })
+                        })
+                    }
+                    else{
+                        $(".MessageScreen").css("display", "none");
+                        OuterModule.mazeRoomClickDetect("../level1/level1.html");
+                        $(".worddoor_container").css("display", "flex");
+                    }
                 })
             })
         })

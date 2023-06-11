@@ -72,6 +72,10 @@ input, .A5{
     height: fit-content;
 }
 
+.MessageScreen{
+    position: relative;
+}
+
 .Message{
     margin-left: 2%;
     margin-right: 2%;

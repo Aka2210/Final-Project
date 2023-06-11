@@ -2,8 +2,8 @@ html{
     overflow-y: hidden;
 }
 
-.mazeScr {
-    background-image: url(../../../asset/imgs/maze.png);
+.level2Scr {
+    background-image: url(../../../asset/imgs/level2.png);
     position: relative;
     width: 100%;
     height: 100%;
@@ -20,45 +20,45 @@ html{
     left:0%;
 }
 
-    .button-container {
-        position: relative;
-        display: inline-block;
-    }
+.button-container {
+    position: relative;
+    display: inline-block;
+}
 
-    .floating-button {
-        position: relative;
-        background-color: black;
-        color: white;
-        width: 300px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        font-family:'Times New Roman', Times, serif;
-        font-size: 16px;
-        top:40%;
-        right:0%;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        z-index: 1;
-        overflow: hidden;
-    }
+.floating-button {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    top:40%;
+    right:0%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
 
-    .floating-button::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 45%, rgba(128, 0, 128, 0.8) 80%);
-        transition: background-color 0.4s ease;
-        opacity: 0;
-    }
+.floating-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 45%, rgba(128, 0, 128, 0.8) 80%);
+    transition: background-color 0.4s ease;
+    opacity: 0;
+}
 
-    .button-container:hover .floating-button::before {
-        background: radial-gradient(circle, rgba(255, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 45%, rgba(128, 0, 128, 0) 80%);
-        opacity: 1;
-        transition-delay: 0.4s;
-    }
+.button-container:hover .floating-button::before {
+    background: radial-gradient(circle, rgba(255, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 45%, rgba(128, 0, 128, 0) 80%);
+    opacity: 1;
+    transition-delay: 0.4s;
+}
