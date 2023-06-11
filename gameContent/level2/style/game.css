@@ -2,8 +2,8 @@ html{
     overflow-y: hidden;
 }
 
-.mazeScr {
-    background-image: url(../../../asset/imgs/maze.png);
+.level2Scr {
+    background-image: url(../../../asset/imgs/level2.png);
     position: relative;
     width: 100%;
     height: 100%;
@@ -11,3 +11,46 @@ html{
     align-items: center;
     background-size: 100% 100%;
 }
+
+.Q2{
+    width: 99%;
+    height: 99%;   
+    position: absolute;   
+    top: 0%; 
+    left:0%;
+}
+
+    .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 9999;
+        overflow: hidden;
+    }
+
+    .floating-button::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 10%, rgba(41, 113, 41, 0.8) 45%, rgba(0, 0, 255, 0.8) 80%);
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease;
+    }
+
+    .floating-button:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
