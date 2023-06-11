@@ -146,3 +146,33 @@ form{
     background-color: rgb(255, 252, 252);
     transition: 0.2s;
 }
+
+.worddoor_container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.worddoor_container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #c8e9ff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 10px #c8e9ff;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.worddoor_container a:hover {
+    color: #cb0303;
+    background: transparent;
+    box-shadow: 0 0 20px 10px #8b0000;
+}

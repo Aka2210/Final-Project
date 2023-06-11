@@ -3,7 +3,7 @@ html{
 }
 
 .mazeScr {
-    background-image: url(../../../asset/imgs/maze.png);
+    background-image: url(../../../asset/imgs/level2.png);
     position: relative;
     width: 100%;
     height: 100%;
