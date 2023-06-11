@@ -20,36 +20,7 @@ function startTiming(){
     let Drink = localStorage.getItem("DRINK");
 
     if(time === 180 && Drink){
-        fetch("dialogue.json")
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                game.Plot = data.cupDie;
-                $(".MessageScreen").css("display", "flex");
-                $(".game").css("display", "none");
-                OuterModule.plotDisplay(0, $(".MessageText"));
-                $(".Check").text("為何會如此，你對我們做了什麼，時間根本還沒到(你指著鬼怪大聲控訴著)。")
-                $(".Check").on("click", () => {
-                    $(".Check").off();
-                    OuterModule.plotDisplay(1, $(".MessageText"), 400);
-                    $(".MessageCharacter").css("display", "none");
-                    $(".Check").text("我的身體...");
-                    $(".Check").on("click", () => {
-                        $(".Check").off();
-                        OuterModule.plotDisplay(2, $(".MessageText"));
-                        $(".Check").text("......");
-                        $(".EYE").css("display", "flex");
-                        $(".MessageScreen").css("z-index", "1000");
-                        setTimeout(() => {
-                            $(".Check").on("click", () => {
-                                $(".Check").off();
-                                OuterModule.diePlay($(".MessageScreen"));
-                            })
-                        }, 6000)
-                    })
-                })
-            })
+        OuterModule.drinkDie("dialogue.json");
     }
 
     if (time === 60) {

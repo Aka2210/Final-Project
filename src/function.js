@@ -1,6 +1,6 @@
 import { game } from "./Game.js";
 
-export{musicPlay, plotDisplay, Music, subtitle, diePlay, mazeRoom, mazeRoomClickDetect};
+export{musicPlay, plotDisplay, Music, subtitle, diePlay, mazeRoom, mazeRoomClickDetect, drinkDie};
 
 let subtitle;
 
@@ -173,4 +173,37 @@ function mazeRoomClickDetect(where){
         localStorage.setItem("room", room);
         window.location.href = where;
     })
+}
+
+function drinkDie(file){
+    fetch(file)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            game.Plot = data.cupDie;
+            $(".MessageScreen").css("display", "flex");
+            $(".game").css("display", "none");
+            plotDisplay(0, $(".MessageText"));
+            $(".Check").text("為何會如此，你對我們做了什麼，時間根本還沒到(你指著鬼怪大聲控訴著)。")
+            $(".Check").on("click", () => {
+                $(".Check").off();
+                plotDisplay(1, $(".MessageText"), 200);
+                $(".MessageCharacter").css("display", "none");
+                $(".Check").text("我的身體...");
+                $(".Check").on("click", () => {
+                    $(".Check").off();
+                    plotDisplay(2, $(".MessageText"));
+                    $(".Check").text("......");
+                    $(".EYE").css("display", "flex");
+                    $(".MessageScreen").css("z-index", "1000");
+                    setTimeout(() => {
+                        $(".Check").on("click", () => {
+                            $(".Check").off();
+                            diePlay($(".MessageScreen"));
+                        })
+                    }, 6000)
+                })
+            })
+        })
 }
