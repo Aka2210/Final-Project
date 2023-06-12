@@ -40,7 +40,8 @@ function plotDisplay(i){//遞迴概念函式
         $('.recap').css({'display' : 'none'});
         $('.roomScreen').css({'display' : 'flex'});
         let die = localStorage.getItem("DIE");
-        if(die)
+        let alive = localStorage.getItem("ALIVE");
+        if(die || alive)
             window.location.href = "../initScreen/init.html";
         else
             window.location.href = "../roomScreen/room.html";
