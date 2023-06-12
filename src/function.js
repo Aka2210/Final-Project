@@ -167,11 +167,22 @@ function mazeRoomClickDetect(where){
         localStorage.setItem("room", room);
         window.location.href = where;
     })
-    $(".worddoor_container a").eq(6).on("click", () => {            
-        roomArray.push(6);
-        room = JSON.stringify(roomArray);
-        localStorage.setItem("room", room);
-        window.location.href = where;
+    $(".worddoor_container a").eq(6).on("click", () => {     
+        $(".Check").off();
+        $(".worddoor_container").remove();
+        $(".MessageScreen").css("display", "flex");       
+        game.Plot = ["是誰允許你們進來的，竟然來了，就永遠留下吧。"]
+        plotDisplay(0, $(".MessageText"), 150);
+        $(".Check").css("display", "none");
+        $(".Check").eq(0).css("display", "flex");
+        $(".Check").eq(0).text("...");
+        $(".MessageCharacter").css("display", "none");
+        $(".MessageScreen").css("background-color", "black");
+
+        $(".Check").eq(0).on("click", () => {
+            $(".Check").off();
+            diePlay($(".MessageScreen"));
+        });
     })
 }
 
@@ -184,6 +195,8 @@ function drinkDie(file){
             game.Plot = data.cupDie;
             $(".MessageScreen").css("display", "flex");
             $(".game").css("display", "none");
+            $(".Check").eq(1).css("display", "none");
+            $(".Check").eq(2).css("display", "none");
             plotDisplay(0, $(".MessageText"));
             $(".Check").text("為何會如此，你對我們做了什麼，時間根本還沒到(你指著鬼怪大聲控訴著)。")
             $(".Check").on("click", () => {
@@ -196,7 +209,9 @@ function drinkDie(file){
                     plotDisplay(2, $(".MessageText"));
                     $(".Check").text("......");
                     $(".EYE").css("display", "flex");
-                    $(".MessageScreen").css("z-index", "1000");
+                    $(".MessageScreen").css({
+                        "position": "relative",
+                        "z-index": "1000"});
                     setTimeout(() => {
                         $(".Check").on("click", () => {
                             $(".Check").off();

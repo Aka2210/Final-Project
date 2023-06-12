@@ -95,6 +95,8 @@ form{
 
 .MessageScreen{
     display: none;
+    position: relative;
+    z-index: 100;
     justify-content: center;
     align-items: end;
     width: 100%;
