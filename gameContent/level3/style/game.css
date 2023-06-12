@@ -1,0 +1,30 @@
+html{
+    overflow-y: hidden;
+}
+
+.level3Scr {
+    background-image: url(../../../asset/imgs/ending.png);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+.woman {
+    width: 36%;
+    height: 35%;   
+    position: absolute;   
+    top: 6%; 
+    left:13%;
+    transition: transform 0.5s ease;
+}
+
+.woman:hover {
+    transform: translateX(25px);
+}
+
+
+
+    
