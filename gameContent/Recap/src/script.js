@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {//偵測按鈕是否被點擊
         })
         .then(function(data) {
             let die = localStorage.getItem("DIE");
+            let alive = localStorage.getItem("ALIVE")
             if(die){
                 let character = localStorage.getItem("Character");
                 if(character === "Brain")
@@ -20,6 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {//偵測按鈕是否被點擊
                 else{
                     game.Plot = data.BadEnding1;
                 }
+            }
+            else if(alive){
+                game.Plot = data.ending;
             }
             else
                 game.Plot = data.Recap;//抓取前情提要劇情

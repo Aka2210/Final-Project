@@ -1,11 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+export{setTimer, timer};
+import {game} from '../../../src/Game.js';
+import * as OuterModule from '../../../src/function.js';
+
+let timer;
+
+function setTimer() {
     const countdownElement = document.querySelector(".time-remaining");
     const progressBar = document.querySelector(".progress-bar");
 
     let countdown = 30;
     let width = 100;
 
-    const timer = setInterval(() => {
+    timer = setInterval(() => {
         countdown--;
         width = (countdown / 30) * 100;
 
@@ -19,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (countdown <= 0) {
             clearInterval(timer);
+            OuterModule.diePlay($(".MessageScreen"));
+            // setTimer();
         }
     }, 1000);
-});
+};

@@ -7,4 +7,6 @@ window.addEventListener('DOMContentLoaded',() =>{
         window.location.href = "../../index.php";
     }
     OuterModule.Music();
+    
+    $(".dialogue1").css("display", "flex");
 })
