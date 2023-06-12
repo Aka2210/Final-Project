@@ -35,7 +35,9 @@
                 if($_POST["playerPasswordSignup"] === $_POST["playerPasswordCheckSignup"]){
                     if(preg_match($emailPattern, $_POST["playerAccountSignup"])){
                         if(preg_match($passwordPattern, $_POST["playerPasswordSignup"])){
-                            $query = "INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('$_POST[playerAccountSignup]', '$_POST[playerPasswordSignup]')";
+                            $hashedPassword = password_hash($_POST["playerPasswordSignup"], PASSWORD_DEFAULT);
+                            
+                            $query = "INSERT INTO `Accounts` (`Account`, `Password`) VALUES ('$_POST[playerAccountSignup]', '$hashedPassword')";
 
                             if ($mysqli->query($query) === TRUE) {
                                 echo

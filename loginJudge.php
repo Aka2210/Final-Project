@@ -10,13 +10,14 @@
         $mysqli = new mysqli('localhost', 'root', '', 'playerAccounts');
         $mysqli->set_charset('utf8mb4');
 
-        $query = "SELECT Account FROM accounts WHERE Account = '$email' AND Password = '$password'";
+        $query = "SELECT Password FROM accounts WHERE Account = '$email'";
 
         $queryResult = $mysqli->query($query);
 
-        $actor = $queryResult->fetch_assoc();
+        $row = $queryResult->fetch_assoc();
+        $hashedPassword = $row['Password'];
 
-        if($actor !== null){
+        if(password_verify($password, $hashedPassword)){
             header('location: ./gameContent/initScreen/init.html');
         }
         else{
