@@ -4,7 +4,7 @@ import * as OuterModule from '../../../src/function.js';
 
 let timer;
 
-function setTimer() {
+function setTimer(data) {
     const countdownElement = document.querySelector(".time-remaining");
     const progressBar = document.querySelector(".progress-bar");
 
@@ -25,13 +25,16 @@ function setTimer() {
 
         if (countdown <= 0) {
             clearInterval(timer);
-            OuterModule.diePlay($(".MessageScreen"));
+            localStorage.setItem("TimeOut", true);
+            DIE(data);
             // setTimer();
         }
     }, 1000);
 };
 
 function problemStart(data, nowPlot){
+    clearInterval(timer);
+    setTimer(data);
     game.Plot = data.Question;
 
     let answer = data.answer;
@@ -111,9 +114,16 @@ function problemStart(data, nowPlot){
 }
 
 function DIE(data){
+    $(".Check").off();
     game.Plot = data.mistake;
-                
-    OuterModule.plotDisplay(0, $(".dialogue1 .MessageText"));
+       
+    let timeOut = localStorage.getItem("TimeOut");
+    if(timeOut){
+        OuterModule.plotDisplay(1, $(".dialogue1 .MessageText"));
+    }
+    else{
+        OuterModule.plotDisplay(0, $(".dialogue1 .MessageText"));
+    }
 
     $(".dialogue1 .Check").css("display", "none");
     $(".dialogue1 .Check").eq(0).css("display", "flex");
