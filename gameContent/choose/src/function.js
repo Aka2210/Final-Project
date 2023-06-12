@@ -14,11 +14,30 @@ function closeClickCreate(){
 
 function checkClickCreate(){
     $(".Check").on('click', () => {
+        $(".MessageCharacter").css("display", "none");
+        $(".Check").off();
         clearInterval(OuterModule.subtitle);
         localStorage.setItem("Character", game.character);
         if(game.character === "mayorson")
             localStorage.setItem("BeKill", true);
-        window.location.href = "../road/road.html";
+
+        fetch("dialogue.json")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            game.Plot = data.goRoad;
+            OuterModule.plotDisplay(0, $(".MessageText"));
+    
+            $(".Close").css("display", "none");
+    
+            $(".Check").text("...");
+    
+            $(".Check").on("click", () => {
+                $(".Check").off();
+                window.location.href = "../road/road.html";
+            })
+        })    
     })
 }
 

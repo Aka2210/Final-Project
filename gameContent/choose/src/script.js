@@ -8,7 +8,30 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     
     OuterModule.Music();
+
+    $(".MessageScreen").css("display", "flex");
+    $(".MessageCharacter").css("display", "none");
+    
+    fetch("dialogue.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        game.Plot = data.init;
+        OuterModule.plotDisplay(0, $(".MessageText"));
+
+        $(".Close").css("display", "none");
+
+        $(".Check").text("...");
+
+        $(".Check").on("click", () => {
+            $(".Check").off();
+            $(".MessageScreen").css("display", "none");
+        })
+    })    
+
     $(".character *").on("click", (character) => {
+        $(".MessageCharacter").css("display", "flex");
         game.character = character.target.className
         sessionStorage.setItem("Character", game.character);
 

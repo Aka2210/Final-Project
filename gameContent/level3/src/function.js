@@ -99,7 +99,10 @@ function problemStart(data, nowPlot){
                 $(".EYE").css("display", "flex");
                 $(".dialogue1").css("display", "none");
                 localStorage.setItem("ALIVE", true);
-                window.location.href = "../Recap/recap.html";
+                setTimeout(() => {
+                    window.location.href = "../Recap/recap.html";
+                },4000);
+                
             })
             
             $(".dialogue1 .Check").eq(0).on("click", () => {
