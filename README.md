@@ -2,6 +2,8 @@
 # Final-小鎮風雲:遊戲攻略
 ### 屬性: 密式逃脫、解謎、恐怖
 
+HankMD閱讀版:https://hackmd.io/06dROy3aRriNDtrSnSQJEw
+
 * 第一人稱視角體驗解謎
 * 懸疑故事情境體驗
 
