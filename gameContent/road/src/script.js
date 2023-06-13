@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                 $(".Check").css("display", "none");
                 $(".Check").eq(0).css("display", "flex");
-                $(".Check").text("對這邊不熟，晚餐找了一陣子呢");
+                $(".Check").text("是啊對這邊不熟，路找了一陣子呢");
 
                 $(".Check").on("click", () => {
                     $(".Check").off();
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded',() =>{
                             game.Plot = data.Alina;
                             OuterModule.plotDisplay(0, $(".MessageText"));
         
-                            $(".Check").eq(0).text("傳說總是空穴來風，是不可信的呢")
+                            $(".Check").eq(0).text("傳說總是空穴來風，您怎麼會相信這個呢")
         
                             $(".Check").eq(1).text("何必相信毫無根據的事呢?")
         
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded',() =>{
                                 
                                 $(".Check").off();
         
-                                $(".Check").eq(1).text("故事有了，就差沒有鬼怪衝出來了");
+                                $(".Check").eq(1).text("故事有了，就差沒有鬼衝出來了");
         
                                 $(".Check").eq(0).text("校園鬼故事啊，好像每間小學或多或少都會有呢");
         
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded',() =>{
                                 OuterModule.plotDisplay(i, $(".MessageText"));
                                 if(i === 1){
                                     $(".Check").eq(0).text("增加監視器數量，減少視野死角?");
-                                    $(".Check").eq(1).text("刑事局介入調查?");
+                                    $(".Check").eq(1).text("讓中央刑事局介入調查?");
                                 }
                                 else if(i === 2){
                                     $(".Check").off();
