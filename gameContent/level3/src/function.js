@@ -99,9 +99,10 @@ function problemStart(data, nowPlot){
                 $(".EYE").css("display", "flex");
                 $(".dialogue1").css("display", "none");
                 localStorage.setItem("ALIVE", true);
-                setTimeout(() => {
+                clearInterval(timer);
+                let dieDelay = setTimeout(() => {
                     window.location.href = "../Recap/recap.html";
-                },4000);
+                },8000);
                 
             })
             
