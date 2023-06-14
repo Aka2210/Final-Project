@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded',() =>{
 
                 $(".Check").css("display", "none");
                 $(".Check").eq(0).css("display", "flex");
-                $(".Check").text("是啊對這邊不熟，路找了一陣子呢");
+                $(".Check").text("看起來就像是恐怖電影會來取景的街道。");
 
                 $(".Check").on("click", () => {
                     $(".Check").off();
