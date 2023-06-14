@@ -1,7 +1,7 @@
 # README
 # Final-小鎮風雲:遊戲攻略
 ### 屬性: 密式逃脫、解謎、恐怖
-
+#### 遊戲創作者:黃椲庭、葉治嘉
 HankMD閱讀版:https://hackmd.io/06dROy3aRriNDtrSnSQJEw
 
 * 第一人稱視角體驗解謎
